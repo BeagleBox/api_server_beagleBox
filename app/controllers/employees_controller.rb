@@ -15,7 +15,7 @@ class EmployeesController < ApplicationController
 
   # PUT /employees/:id
   def update
-    @todo.update(employee_params)
+    @employee.update(employee_params)
     head :no_content
   end
 

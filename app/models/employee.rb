@@ -1,4 +1,8 @@
 class Employee < ApplicationRecord
+
+  belongs_to :departament
+  accepts_nested_attributes_for :departament
+
   #attr_accessor :name
   has_secure_password
 

@@ -1,3 +1,3 @@
 class EmployeeSerializer < ActiveModel::Serializer
-  attributes :id,:name,:registration
+  attributes :id,:name,:registration,:departament
 end
