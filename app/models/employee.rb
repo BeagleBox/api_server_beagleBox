@@ -1,9 +1,10 @@
 class Employee < ApplicationRecord
-
+  #attr_accessor :name
   has_secure_password
+
   validates :registration, uniqueness: true, presence: true, length:{in: 9..9}
-  validates :name, presence: true, length:{in: 5..80}
-  validates :password, presence: true, length:{in: 8..8}
+  validates :name, presence: true , length:{in: 3..40}
+  validates :password, presence: true, length:{in: 4..8}
 
   # validates :name, presence: true, length:{in: 5..80}
   # validates :email, confirmation: true, presence: true, uniqueness: true
