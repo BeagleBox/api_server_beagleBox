@@ -10,7 +10,7 @@ class EmployeesController < ApplicationController
 
   # GET /employees/:id
   def show
-    json_response(@employee)
+    render json:(@employee)
   end
 
   # PUT /employees/:id
@@ -29,11 +29,12 @@ class EmployeesController < ApplicationController
 
   def employee_params
     # whitelist params
-    params.permit(:name,:registration,:password)
+    params.permit(:name,:registration,:password,:email)
   end
 
   def set_employee
     @employee = Employee.find(params[:id])
+    @employee.contacts = @employee.contacts
   end
 
 end

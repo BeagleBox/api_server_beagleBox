@@ -8,4 +8,4 @@
 
 Departament.create(name:"Secretaria")
 Departament.create(name:"CPD")
-Employee.create(name:'João', registration:150132042,password:"12345678", departament_id:1)
+Employee.create(name:'João', registration:150132042, email:'joaohenrique.p.almeida@gmail.com',password:"12345678", departament_id:1)

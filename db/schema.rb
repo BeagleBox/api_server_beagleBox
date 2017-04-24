@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170423160454) do
+ActiveRecord::Schema.define(version: 20170424013453) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "contacts", force: :cascade do |t|
+    t.string   "description"
+    t.string   "type"
+    t.integer  "employee_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["employee_id"], name: "index_contacts_on_employee_id", using: :btree
+  end
 
   create_table "departaments", force: :cascade do |t|
     t.string   "name"
@@ -21,11 +33,12 @@ ActiveRecord::Schema.define(version: 20170423160454) do
   create_table "employees", force: :cascade do |t|
     t.string   "name"
     t.integer  "registration"
+    t.string   "email"
     t.integer  "departament_id"
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.index ["departament_id"], name: "index_employees_on_departament_id"
+    t.index ["departament_id"], name: "index_employees_on_departament_id", using: :btree
   end
 
 end

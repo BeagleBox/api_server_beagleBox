@@ -10,7 +10,7 @@ class DepartamentsController < ApplicationController
 
   # GET /departaments/:id
   def show
-    json_response(@departament)
+    render json:(@departament)
   end
 
   # PUT /departaments/:id
