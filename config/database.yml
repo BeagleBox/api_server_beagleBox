@@ -4,22 +4,37 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 #
+
+
+
+# Pessoal quando for usar o banco de dados postgresql pois ele é o do heroku
+# Instalar o postgresql no PC
+# acessar o CLI do postgresql com
+#   - sudo -u postgres psql postgres
+# #Dentro do terminanal
+#   - CREATE USER beaglebox1 WITH PASSWORD CREATEDB 'beaglebox';
+# Para sair do CLI do postgres use o \q
+
+
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
   pool: 5
   timeout: 5000
+  username: beaglebox2
+  password: beaglebox
+  host: localhost
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: db_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: db_test
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: db_production
