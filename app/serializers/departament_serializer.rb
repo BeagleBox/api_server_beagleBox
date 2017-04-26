@@ -1,3 +1,4 @@
 class DepartamentSerializer < ActiveModel::Serializer
-  attributes :id,:name,:contacts
+  attributes :id,:name
+  has_many :contacts
 end
