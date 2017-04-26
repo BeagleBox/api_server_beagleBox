@@ -4,7 +4,7 @@ class CreateContacts < ActiveRecord::Migration[5.0]
       t.string :description
       t.string :type
       t.belongs_to :employee, index: true
-
+      t.belongs_to :departament, index:true
       t.timestamps
     end
   end

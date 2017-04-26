@@ -1,3 +1,3 @@
 class DepartamentSerializer < ActiveModel::Serializer
-  attributes :id,:name
+  attributes :id,:name,:contacts
 end
