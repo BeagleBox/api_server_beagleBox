@@ -6,14 +6,23 @@
 #
 
 
+# Passo a passo para executar o projeto
+# Observacao: Passos 1 e 2 devem ser exdcutados apenas uma vez! 
 
-# Pessoal quando for usar o banco de dados postgresql pois ele é o do heroku
-# Instalar o postgresql no PC
-# acessar o CLI do postgresql com
-#   - sudo -u postgres psql postgres
-# #Dentro do terminanal
-#   - CREATE USER beaglebox1 WITH PASSWORD CREATEDB 'beaglebox';
-# Para sair do CLI do postgres use o \q
+# (1) Configuracao do banco com o postgresql
+# $ sudo -u postgres psql postgres
+# $ CREATE DATABASE db_development;
+# $ \connect db_development;
+# $ CREATE USER beaglebox2 WITH PASSWORD 'beaglebox';
+# $ \q
+
+# (2)Inicializando o banco
+# rake db:migrate
+# rake db:seed
+
+# (3) Executar o projeto
+# rails s
+
 
 
 default: &default
