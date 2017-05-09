@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   resources :departaments
   resources :admins
 
+  get '/employees/search/:name', to: 'employees#search_employees'
+  get '/employees/search_departament/:departament', to: 'employees#search_employees_by_departament'
+
+
 end

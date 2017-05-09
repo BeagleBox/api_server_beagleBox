@@ -25,6 +25,21 @@ class EmployeesController < ApplicationController
     head :no_content
   end
 
+  def search_employees
+    @employees = Employee.all
+    render json:@employees
+  end
+
+  def search_employees_by_departament
+
+    if params[:departament] != '0'
+      @employees = Employee.where(departament_id: params[:departament])
+    else
+      @employees = Employee.all
+    end
+    render json:@employees
+  end
+
   private
 
   def employee_params

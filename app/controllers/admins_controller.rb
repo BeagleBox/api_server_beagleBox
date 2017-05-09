@@ -25,6 +25,8 @@ class AdminsController < ApplicationController
     head :no_content
   end
 
+
+
   private
 
   def admin_params
