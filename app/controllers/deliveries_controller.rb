@@ -2,30 +2,17 @@ class DeliveriesController < ApplicationController
   before_action :set_delivery, only: [:show, :update, :destroy]
 
   # GET /deliveries
-  # GET /deliveries.json
   def index
     @deliveries = Delivery.all
+    render json:@deliveries
   end
 
-  # GET /deliveries/1
-  # GET /deliveries/1.json
+  # GET /deliveries/:id
   def show
+    render json:@deliveries
   end
 
-  # POST /deliveries
-  # POST /deliveries.json
-  def create
-    @delivery = Delivery.new(delivery_params)
-
-    if @delivery.save
-      render :show, status: :created, location: @delivery
-    else
-      render json: @delivery.errors, status: :unprocessable_entity
-    end
-  end
-
-  # PATCH/PUT /deliveries/1
-  # PATCH/PUT /deliveries/1.json
+  # PUT /deliveries/:id
   def update
     if @delivery.update(delivery_params)
       render :show, status: :ok, location: @delivery
@@ -34,8 +21,7 @@ class DeliveriesController < ApplicationController
     end
   end
 
-  # DELETE /deliveries/1
-  # DELETE /deliveries/1.json
+  # DELETE /deliveries/:id
   def destroy
     @delivery.destroy
   end
