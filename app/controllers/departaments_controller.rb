@@ -25,6 +25,11 @@ class DepartamentsController < ApplicationController
     head :no_content
   end
 
+  def departament_name
+    @departaments = Departament.all
+    render json:@departaments
+  end
+
   private
 
   def departament_params
