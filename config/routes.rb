@@ -11,6 +11,6 @@ Rails.application.routes.draw do
   post 'login', to: 'authentication#authenticate'
 
   #get names of departaments as string
-  get '/departaments/departament_name', to: 'departaments#departament_name'
+  get '/departament_name', to: 'departaments#departament_name'
 
 end

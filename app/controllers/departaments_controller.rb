@@ -27,7 +27,11 @@ class DepartamentsController < ApplicationController
 
   def departament_name
     @departaments = Departament.all
-    render json:@departaments
+    @depart_name = []
+    @departaments.each { |d|
+      @depart_name << d.name
+    }
+    render json:@depart_name
   end
 
   private
