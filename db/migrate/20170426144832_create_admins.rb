@@ -4,7 +4,8 @@ class CreateAdmins < ActiveRecord::Migration[5.0]
       t.string :admin_name
       t.integer :admin_registration
       t.string :admin_email
-      t.string :admin_password_digest
+      t.string :password_digest
+
       t.timestamps
     end
   end
