@@ -16,8 +16,13 @@ class AuthenticateEmployee
 
   def employee
     employee = Employee.find_by_email(email)
-    return employee if employee && employee.authenticate(password)
-    errors.add :employee_authentication, 'invalid credentials'
-    nil
+    if employee && employee.authenticate(password)
+      Thread.current[:current_user] = employee
+      @current_employee = employee
+      return employee
+    else
+      errors.add :employee_authentication, 'invalid credentials'
+      return nil
+    end
   end
 end
