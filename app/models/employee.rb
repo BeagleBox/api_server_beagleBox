@@ -16,6 +16,7 @@ class Employee < ApplicationRecord
   # validates :name, presence: true, length:{in: 5..80}
   # validates :password, presence: true, on: :create
 
-
+  #has_many :deliveries, class_name: "Delivery", foreign_key: "sender_id"
+  #has_many :deliveries, class_name: "Delivery", foreign_key: "recipient_id"
 
 end
