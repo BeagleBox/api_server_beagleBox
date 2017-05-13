@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   get '/employees/search/:name', to: 'employees#search_employees'
   get '/employees/search_departament/:departament', to: 'employees#search_employees_by_departament'
+  get '/search_items/:delivery_id', to: 'items#search_items_by_delivery'
 
   post 'login', to: 'authentication#authenticate'
 

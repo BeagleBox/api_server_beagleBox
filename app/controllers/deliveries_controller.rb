@@ -27,12 +27,11 @@ class DeliveriesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
     def set_delivery
       @delivery = Delivery.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def delivery_params
       params.require(:delivery).permit(:status, :sender_employee_id, :recipient_employee_id)
     end

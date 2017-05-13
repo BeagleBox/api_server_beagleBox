@@ -2,18 +2,15 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :update, :destroy]
 
   # GET /items
-  # GET /items.json
   def index
     @items = Item.all
   end
 
-  # GET /items/1
-  # GET /items/1.json
+  # GET /items/:id
   def show
   end
 
   # POST /items
-  # POST /items.json
   def create
     @item = Item.new(item_params)
 
@@ -24,8 +21,7 @@ class ItemsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /items/1
-  # PATCH/PUT /items/1.json
+  # PUT /items/:id
   def update
     if @item.update(item_params)
       render :show, status: :ok, location: @item
@@ -34,10 +30,20 @@ class ItemsController < ApplicationController
     end
   end
 
-  # DELETE /items/1
-  # DELETE /items/1.json
+  # DELETE /items/:id
   def destroy
     @item.destroy
+  end
+
+  def search_items_by_delivery
+
+    if params[:delivery_id] != '0'
+      @items = Item.where(delivery_id: params[:delivery_id])
+    else
+      @items = Item.all
+    end
+
+    render json:@items
   end
 
   private
@@ -48,6 +54,6 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:name, :description)
+      params.require(:item).permit(:name)
     end
 end

@@ -4,6 +4,7 @@ class Employee < ApplicationRecord
   has_many :contacts, dependent: :destroy
   accepts_nested_attributes_for :departament, :contacts
 
+
   #attr_accessor :name
   has_secure_password
 
