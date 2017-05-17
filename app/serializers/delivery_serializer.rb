@@ -1,3 +1,3 @@
 class DeliverySerializer < ActiveModel::Serializer
-  attributes :id, :status
+  attributes :id, :status, :tracker
 end

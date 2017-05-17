@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170512194028) do
+ActiveRecord::Schema.define(version: 20170516133010) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,12 +37,17 @@ ActiveRecord::Schema.define(version: 20170512194028) do
 
   create_table "deliveries", force: :cascade do |t|
     t.string   "status"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.string   "tracker"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.integer  "sender_id"
     t.integer  "recipient_id"
+    t.integer  "source_id"
+    t.integer  "destination_id"
+    t.index ["destination_id"], name: "index_deliveries_on_destination_id", using: :btree
     t.index ["recipient_id"], name: "index_deliveries_on_recipient_id", using: :btree
     t.index ["sender_id"], name: "index_deliveries_on_sender_id", using: :btree
+    t.index ["source_id"], name: "index_deliveries_on_source_id", using: :btree
   end
 
   create_table "departaments", force: :cascade do |t|
@@ -60,6 +65,13 @@ ActiveRecord::Schema.define(version: 20170512194028) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.index ["departament_id"], name: "index_employees_on_departament_id", using: :btree
+  end
+
+  create_table "hotspots", force: :cascade do |t|
+    t.string   "name"
+    t.string   "localization"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "items", force: :cascade do |t|
