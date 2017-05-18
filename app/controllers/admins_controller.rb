@@ -31,7 +31,7 @@ class AdminsController < ApplicationController
 
   def admin_params
     # whitelist params
-    params.permit(:name,:registration,:password,:email)
+    params.permit(:admin_name,:admin_registration,:password_digest,:admin_email)
   end
 
   def set_admin

@@ -1,3 +1,3 @@
 class ContactSerializer < ActiveModel::Serializer
-  attributes :id,:description
+  attributes :id,:contact_description
 end

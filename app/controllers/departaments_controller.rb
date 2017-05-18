@@ -29,7 +29,7 @@ class DepartamentsController < ApplicationController
 
   def departament_params
     # whitelist params
-    params.permit(:name)
+    params.permit(:departament_name)
   end
 
   def set_departament
