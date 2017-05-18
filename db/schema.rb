@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170516133010) do
+ActiveRecord::Schema.define(version: 20170517204338) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20170516133010) do
   create_table "deliveries", force: :cascade do |t|
     t.string   "status"
     t.string   "tracker"
+    t.integer  "route_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.integer  "sender_id"
@@ -46,6 +47,7 @@ ActiveRecord::Schema.define(version: 20170516133010) do
     t.integer  "destination_id"
     t.index ["destination_id"], name: "index_deliveries_on_destination_id", using: :btree
     t.index ["recipient_id"], name: "index_deliveries_on_recipient_id", using: :btree
+    t.index ["route_id"], name: "index_deliveries_on_route_id", using: :btree
     t.index ["sender_id"], name: "index_deliveries_on_sender_id", using: :btree
     t.index ["source_id"], name: "index_deliveries_on_source_id", using: :btree
   end
@@ -80,6 +82,16 @@ ActiveRecord::Schema.define(version: 20170516133010) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["delivery_id"], name: "index_items_on_delivery_id", using: :btree
+  end
+
+  create_table "routes", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "source_id"
+    t.integer  "destination_id"
+    t.index ["destination_id"], name: "index_routes_on_destination_id", using: :btree
+    t.index ["source_id"], name: "index_routes_on_source_id", using: :btree
   end
 
 end

@@ -32,6 +32,17 @@ class DeliveriesController < ApplicationController
     render json:@deliveries
   end
 
+  def search_delivery_by_route
+
+    if params[:route] != '0'
+      @deliveries = Delivery.where(route_id: params[:route])
+    else
+      @deliveries = Delivery.all
+    end
+
+    render json:@deliveries
+  end
+
   # DELETE /deliveries/:id
   def destroy
     @delivery.destroy
