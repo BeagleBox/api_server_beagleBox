@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20170512202008) do
 
   # These are extensions that must be enabled in order to support this database
@@ -36,6 +37,23 @@ ActiveRecord::Schema.define(version: 20170512202008) do
     t.index ["employee_id"], name: "index_contacts_on_employee_id", using: :btree
   end
 
+  create_table "deliveries", force: :cascade do |t|
+    t.string   "status"
+    t.string   "tracker"
+    t.integer  "route_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "sender_id"
+    t.integer  "recipient_id"
+    t.integer  "source_id"
+    t.integer  "destination_id"
+    t.index ["destination_id"], name: "index_deliveries_on_destination_id", using: :btree
+    t.index ["recipient_id"], name: "index_deliveries_on_recipient_id", using: :btree
+    t.index ["route_id"], name: "index_deliveries_on_route_id", using: :btree
+    t.index ["sender_id"], name: "index_deliveries_on_sender_id", using: :btree
+    t.index ["source_id"], name: "index_deliveries_on_source_id", using: :btree
+  end
+
   create_table "departaments", force: :cascade do |t|
     t.string   "departament_name"
     t.datetime "created_at",       null: false
@@ -52,6 +70,31 @@ ActiveRecord::Schema.define(version: 20170512202008) do
     t.integer  "departament_id"
     t.boolean  "is_admin",              default: false
     t.index ["departament_id"], name: "index_employees_on_departament_id", using: :btree
+  end
+
+  create_table "hotspots", force: :cascade do |t|
+    t.string   "name"
+    t.string   "localization"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "delivery_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["delivery_id"], name: "index_items_on_delivery_id", using: :btree
+  end
+
+  create_table "routes", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "source_id"
+    t.integer  "destination_id"
+    t.index ["destination_id"], name: "index_routes_on_destination_id", using: :btree
+    t.index ["source_id"], name: "index_routes_on_source_id", using: :btree
   end
 
 end
