@@ -17,9 +17,6 @@ Employee.create(name:'Elaine', registration:561243921, email:'elaine@gmail.com',
 employee1 = Employee.create(name:'Yeltisin', registration:561243921, email:'yeltsin@gmail.com',password:"12345678", departament_id:1)
 employee2 = Employee.create(name:'Gabriela', registration:261243921, email:'humberto@gmail.com',password:"12345678", departament_id:2)
 
-item1 = Item.create(name: "Data Show")
-item2 = Item.create(name: "Cabo de Energia")
-
 hotSpot1 = Hotspot.create(name: "Secretaria", localization: "Predio 1")
 hotSpot2 = Hotspot.create(name: "Sala 4", localization: "Predio 2")
 
@@ -30,5 +27,6 @@ delivery1 = Delivery.create(status: "Em Trânsito",
 							recipient_id: employee2.id, 
 							source_id: hotSpot1.id, 
 							destination_id: hotSpot2.id)
-delivery1.items << item1
-delivery1.items << item2
+
+item1 = Item.create(name: "Data Show", delivery_id: delivery1.id)
+item2 = Item.create(name: "Cabo de Energia", delivery_id: delivery1.id)
