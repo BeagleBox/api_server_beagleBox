@@ -8,13 +8,13 @@
 
 Departament.create(departament_name:"Secretaria")
 Departament.create(departament_name:"CPD")
-Employee.create(employee_name:'João', employee_registration:150132042, employee_email:'joaohenrique.p.almeida@gmail.com',password_digest:"12345678", departament_id:1)
-Employee.create(employee_name:'Humberto', employee_registration:261243921, employee_email:'humberto@gmail.com',password_digest:"12345678", departament_id:2)
-Employee.create(employee_name:'Elaine', employee_registration:561243921, employee_email:'elaine@gmail.com',password_digest:"12345678", departament_id:1)
+Employee.create(employee_name:'João', employee_registration:150132042, employee_email:'joaohenrique.p.almeida@gmail.com',password:"12345678", departament_id:1)
+Employee.create(employee_name:'Humberto', employee_registration:261243921, employee_email:'humberto@gmail.com',password:"12345678", departament_id:2)
+Employee.create(employee_name:'Elaine', employee_registration:561243921, employee_email:'elaine@gmail.com',password:"12345678", departament_id:1)
 
 
-employee1 = Employee.create(employee_name:'Yeltisin', employee_registration:561243921, employee_email:'yeltsin@gmail.com',password_digest:"12345678", departament_id:1)
-employee2 = Employee.create(employee_name:'Gabriela', employee_registration:261243921, employee_email:'humberto@gmail.com',password_digest:"12345678", departament_id:2)
+employee1 = Employee.create(employee_name:'Yeltisin', employee_registration:561243921, employee_email:'yeltsin@gmail.com',password:"12345678", departament_id:1)
+employee2 = Employee.create(employee_name:'Gabriela', employee_registration:261243921, employee_email:'humberto@gmail.com',password:"12345678", departament_id:2)
 
 hotSpot1 = Hotspot.create(name: "Secretaria", localization: "Predio 1")
 hotSpot2 = Hotspot.create(name: "Sala 4", localization: "Predio 2")
