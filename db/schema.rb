@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20170512202008) do
     t.string   "employee_name"
     t.integer  "employee_registration"
     t.string   "employee_email"
-    t.string   "password_digest"
+    t.string   "password"
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
     t.integer  "departament_id"

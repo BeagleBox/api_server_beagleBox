@@ -4,7 +4,7 @@ class CreateEmployees < ActiveRecord::Migration[5.0]
       t.string :employee_name
       t.integer :employee_registration
       t.string :employee_email
-      t.string :password_digest
+      t.string :password
 
       t.timestamps
 

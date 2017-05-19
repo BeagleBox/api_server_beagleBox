@@ -1,8 +1,8 @@
 class AuthenticateEmployee
 
   prepend SimpleCommand
-  def initialize(email, password)
-    @email = email
+  def initialize(employee_email, password)
+    @email = employee_email
     @password = password
   end
 
@@ -12,12 +12,12 @@ class AuthenticateEmployee
 
   private
 
-  attr_accessor :email, :password
+  attr_accessor :employee_email, :password
 
   def employee
-    employee = Employee.find_by_email(email)
+    employee = Employee.find_by(employee_email: employee_email)
     if employee && employee.authenticate(password)
-      Thread.current[:current_user] = employee
+      Thread.current[:current_employee] = employee
       @current_employee = employee
       return employee
     else
