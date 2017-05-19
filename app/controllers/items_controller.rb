@@ -12,15 +12,10 @@ class ItemsController < ApplicationController
 
   # POST /items
   def create
-
-    if params[:name] 
-      @item = Item.new(delivery_params)
-    else 
-      @item = Item.new()
-    end
+    @item = Item.new(item_params)
 
     if @item.save
-      render :show, status: :created, location: @item
+      render json: @delivery.to_json 
     else
       render json: @item.errors, status: :unprocessable_entity
     end
