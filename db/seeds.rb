@@ -26,11 +26,3 @@ delivery1 = Delivery.create(status: "Em Trânsito",
 							recipient_id: employee2.id,
 							source_id: hotSpot1.id,
 							destination_id: hotSpot2.id)
-<<<<<<< HEAD
-
-item1 = Item.create(name: "Data Show", delivery_id: delivery1.id)
-item2 = Item.create(name: "Cabo de Energia", delivery_id: delivery1.id)
-=======
-delivery1.items << item1
-delivery1.items << item2
->>>>>>> d7a33cf809acac5ba1aacbe31a41d2bf06d6f4ed
