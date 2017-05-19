@@ -12,10 +12,28 @@ class DeliveriesController < ApplicationController
     render json:@deliveries
   end
 
+    # POST /items
+  def create
+
+    if params[:status] 
+      @delivery = Delivery.new(delivery_params)
+    else 
+      @delivery = Delivery.new()
+    end
+
+    if @delivery.save
+      # render :show, status: :created, location: @delivery
+      render json: @delivery.to_json 
+    else
+      render json: @delivery.errors, status: :unprocessable_entity
+    end
+  end
+
   # PUT /deliveries/:id
   def update
     if @delivery.update(delivery_params)
-      render :show, status: :ok, location: @delivery
+      # render :show, status: :ok, location: @delivery
+      render json: @delivery.to_json
     else
       render json: @delivery.errors, status: :unprocessable_entity
     end

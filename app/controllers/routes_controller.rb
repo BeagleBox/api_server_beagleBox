@@ -15,7 +15,8 @@ class RoutesController < ApplicationController
     @route = Route.new(route_params)
 
     if @route.save
-      render :show, status: :created, location: @route
+      # render :show, status: :created, location: @route
+      render json: @user.to_json
     else
       render json: @route.errors, status: :unprocessable_entity
     end
