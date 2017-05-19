@@ -4,6 +4,7 @@ class ItemsController < ApplicationController
   # GET /items
   def index
     @items = Item.all
+    render json: @items.to_json 
   end
 
   # GET /items/:id
