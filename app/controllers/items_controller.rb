@@ -15,7 +15,7 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
 
     if @item.save
-      render json: @delivery.to_json 
+      render json: @item.to_json 
     else
       render json: @item.errors, status: :unprocessable_entity
     end
