@@ -12,7 +12,12 @@ class ItemsController < ApplicationController
 
   # POST /items
   def create
-    @item = Item.new(item_params)
+
+    if params[:name] 
+      @item = Item.new(delivery_params)
+    else 
+      @item = Item.new()
+    end
 
     if @item.save
       render :show, status: :created, location: @item
