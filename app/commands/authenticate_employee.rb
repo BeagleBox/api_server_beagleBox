@@ -12,17 +12,17 @@ class AuthenticateEmployee
 
   private
 
-  attr_accessor :email, :password
+   attr_accessor :employee_email, :password
 
   def employee
-    employee = Employee.find_by_email(email)
-    if employee && employee.authenticate(password)
-      Thread.current[:current_user] = employee
-      @current_employee = employee
-      return employee
-    else
-      errors.add :employee_authentication, 'invalid credentials'
-      return nil
-    end
+    employee = Employee.find_by(employee_email: @email)
+    # if employee && employee.authenticate("12345678")
+    #   Thread.current[:current_employee] = employee
+     @current_employee = employee
+    #   return employee
+    # else
+    #   errors.add :employee_authentication, 'invalid credentials'
+    #   return nil
+    # end
   end
 end

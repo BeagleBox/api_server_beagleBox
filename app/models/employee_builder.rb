@@ -7,8 +7,8 @@ class EmployeeBuilder
   end
 
 
-  def build_employee name, email
-      Employee.crete(name:name,email:email)
+  def build_employee employee_name, employee_email
+      Employee.crete(employee_name:employee_name,employee_email:employee_email)
   end
 
   def with_contact contacts
