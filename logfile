@@ -1,0 +1,104 @@
+LOG:  database system was shut down at 2017-05-12 15:04:54 -03
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+LOG:  received fast shutdown request
+LOG:  aborting any active transactions
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2017-05-12 15:05:23 -03
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+ERROR:  relation "senders" does not exist
+STATEMENT:  CREATE TABLE "deliveries" ("id" serial primary key, "status" character varying, "sender_id" integer, "recipient_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_ea5f7a1bdc"
+	FOREIGN KEY ("sender_id")
+	  REFERENCES "senders" ("id")
+	, CONSTRAINT "fk_rails_3afd324334"
+	FOREIGN KEY ("recipient_id")
+	  REFERENCES "recipients" ("id")
+	)
+ERROR:  relation "senders" does not exist
+STATEMENT:  CREATE TABLE "deliveries" ("id" serial primary key, "status" character varying, "sender_id" integer, "recipient_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_ea5f7a1bdc"
+	FOREIGN KEY ("sender_id")
+	  REFERENCES "senders" ("id")
+	, CONSTRAINT "fk_rails_3afd324334"
+	FOREIGN KEY ("recipient_id")
+	  REFERENCES "recipients" ("id")
+	)
+ERROR:  must be owner of database db_development
+STATEMENT:  DROP DATABASE IF EXISTS "db_development"
+ERROR:  must be owner of database db_development
+STATEMENT:  DROP DATABASE IF EXISTS "db_development"
+FATAL:  database "yeltsinsuareslobatogama" does not exist
+FATAL:  database "yeltsinsuareslobatogama" does not exist
+ERROR:  relation "senders" does not exist
+STATEMENT:  ALTER TABLE "deliveries" ADD CONSTRAINT "fk_rails_ea5f7a1bdc"
+	FOREIGN KEY ("sender_id")
+	  REFERENCES "senders" ("id")
+	
+ERROR:  column "buyer_id" referenced in foreign key constraint does not exist
+STATEMENT:  ALTER TABLE "deliveries" ADD CONSTRAINT "fk_rails_affe07b3af"
+	FOREIGN KEY ("buyer_id")
+	  REFERENCES "employees" ("id")
+	
+ERROR:  must be owner of database db_development
+STATEMENT:  DROP DATABASE IF EXISTS "db_development"
+ERROR:  syntax error at or near "dropbd" at character 1
+STATEMENT:  dropbd db_development
+	dropdb db_development
+	dropdb 'db_development'
+	dropdb 'db_development'
+	dropdb db_development
+	dropdb db_development
+	DROP DATABASE db_development
+	DROP DATABASE db_development;
+ERROR:  role "beaglebox2" already exists
+STATEMENT:  CREATE USER beaglebox2 WITH PASSWORD 'beaglebox';
+ERROR:  database "db_development" is being accessed by other users
+DETAIL:  There is 1 other session using the database.
+STATEMENT:  DROP DATABASE db_development;
+ERROR:  column deliveries.delivery does not exist at character 47
+STATEMENT:  SELECT "deliveries".* FROM "deliveries" WHERE "deliveries"."delivery" IS NULL
+ERROR:  database "db_development" is being accessed by other users
+DETAIL:  There are 3 other sessions using the database.
+STATEMENT:  DROP DATABASE db_development;
+ERROR:  column deliveries.delivery does not exist at character 47
+STATEMENT:  SELECT "deliveries".* FROM "deliveries" WHERE "deliveries"."delivery" IS NULL
+ERROR:  column deliveries.delivery does not exist at character 47
+STATEMENT:  SELECT "deliveries".* FROM "deliveries" WHERE "deliveries"."delivery" = $1
+ERROR:  insert or update on table "deliveries" violates foreign key constraint "fk_rails_ea5f7a1bdc"
+DETAIL:  Key (sender_id)=(2) is not present in table "employees".
+STATEMENT:  INSERT INTO "deliveries" ("id", "status", "created_at", "updated_at", "sender_id", "recipient_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  insert or update on table "deliveries" violates foreign key constraint "fk_rails_ea5f7a1bdc"
+DETAIL:  Key (sender_id)=(1) is not present in table "employees".
+STATEMENT:  INSERT INTO "deliveries" ("id", "status", "created_at", "updated_at", "sender_id", "recipient_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  insert or update on table "deliveries" violates foreign key constraint "fk_rails_ea5f7a1bdc"
+DETAIL:  Key (sender_id)=(1) is not present in table "employees".
+STATEMENT:  INSERT INTO "deliveries" ("status", "created_at", "updated_at", "sender_id", "recipient_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"
+ERROR:  insert or update on table "deliveries" violates foreign key constraint "fk_rails_ea5f7a1bdc"
+DETAIL:  Key (sender_id)=(1) is not present in table "employees".
+STATEMENT:  INSERT INTO "deliveries" ("status", "created_at", "updated_at", "sender_id", "recipient_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"
+ERROR:  insert or update on table "deliveries" violates foreign key constraint "fk_rails_ea5f7a1bdc"
+DETAIL:  Key (sender_id)=(1) is not present in table "employees".
+STATEMENT:  INSERT INTO "deliveries" ("status", "created_at", "updated_at", "sender_id", "recipient_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"
+ERROR:  insert or update on table "deliveries" violates foreign key constraint "fk_rails_ea5f7a1bdc"
+DETAIL:  Key (sender_id)=(1) is not present in table "employees".
+STATEMENT:  INSERT INTO "deliveries" ("status", "created_at", "updated_at", "sender_id", "recipient_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"
+ERROR:  column items.delivery_id does not exist at character 37
+STATEMENT:  SELECT "items".* FROM "items" WHERE "items"."delivery_id" = $1
+ERROR:  column items.delivery_id does not exist at character 37
+STATEMENT:  SELECT "items".* FROM "items" WHERE "items"."delivery_id" = $1
+ERROR:  column items.delivery_id does not exist at character 37
+STATEMENT:  SELECT "items".* FROM "items" WHERE "items"."delivery_id" = $1
+ERROR:  column items.delivery_id does not exist at character 37
+STATEMENT:  SELECT "items".* FROM "items" WHERE "items"."delivery_id" IS NULL
+ERROR:  column items.delivery_id does not exist at character 37
+STATEMENT:  SELECT "items".* FROM "items" WHERE "items"."delivery_id" = '1'
+ERROR:  column items.delivery_id does not exist at character 37
+STATEMENT:  SELECT "items".* FROM "items" WHERE "items"."delivery_id" = '1'
+ERROR:  column items.delivery_id does not exist at character 37
+STATEMENT:  SELECT "items".* FROM "items" WHERE "items"."delivery_id" = $1
+ERROR:  column items.delivery_id does not exist at character 37
+STATEMENT:  SELECT "items".* FROM "items" WHERE "items"."delivery_id" = $1

@@ -4,6 +4,7 @@ class Employee < ApplicationRecord
   has_many :contacts, dependent: :destroy
   accepts_nested_attributes_for :departament, :contacts
 
+
   #attr_accessor :name
   #has_secure_password
 
@@ -16,6 +17,7 @@ class Employee < ApplicationRecord
   # validates :name, presence: true, length:{in: 5..80}
   # validates :password, presence: true, on: :create
 
-
+  #has_many :deliveries, class_name: "Delivery", foreign_key: "sender_id"
+  #has_many :deliveries, class_name: "Delivery", foreign_key: "recipient_id"
 
 end
