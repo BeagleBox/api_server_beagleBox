@@ -7,6 +7,7 @@ class DeliveryChannel < ApplicationCable::Channel
   end
 
   def start_delivery
+    
   end
 
   def finish_delivery

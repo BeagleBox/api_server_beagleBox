@@ -1,6 +1,7 @@
 class Delivery < ApplicationRecord
 
 	after_create :set_tracker_id, :set_delivery_route
+	after_commit :inform_create_delivery
 
 	belongs_to :route, :class_name => "Route", optional: true
 
@@ -20,5 +21,10 @@ class Delivery < ApplicationRecord
 		@routes = Route.where(source_id: self.source_id, destination_id: self.destination_id)
    		self.route = @routes.first
    		self.save
+	end
+
+
+	def inform_create_delivery
+		DeliveryJob.perform_later self
 	end
 end

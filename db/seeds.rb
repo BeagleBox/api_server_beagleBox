@@ -24,10 +24,6 @@ hotSpot2 = Hotspot.create(name: "Sala 4", localization: "Predio 2")
 
 Route.create(name: "Route 1", source_id: hotSpot1.id, destination_id: hotSpot2.id)
 
-delivery1 = Delivery.create(status: "Em Trânsito",
-							sender_id: employee1.id,
-							recipient_id: employee2.id,
-							source_id: hotSpot1.id,
-							destination_id: hotSpot2.id)
+delivery1 = Delivery.create(status: "Em Trânsito",sender_id: employee1.id,recipient_id: employee2.id,source_id: hotSpot1.id,destination_id: hotSpot2.id)
 delivery1.items << item1
 delivery1.items << item2
