@@ -15,11 +15,15 @@ Rails.application.routes.draw do
   get '/search_items_by_delivery/:delivery_id', to: 'items#search_items_by_delivery'
   get '/search_routes_by_source_destination/:source_id/:destination_id', to: 'routes#search_routes_by_source_destination'
   get '/search_delivery_by_route/:route', to: 'deliveries#search_delivery_by_route'
-  
+
 
   post 'login', to: 'authentication#authenticate'
 
   #get names of departaments as string
   get '/departament_name', to: 'departaments#departament_name'
+
+  #Route for RTC using for send information for raspberry
+  mount ActionCable.server => "/cable"
+
 
 end
