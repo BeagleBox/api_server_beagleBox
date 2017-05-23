@@ -12,11 +12,22 @@ class DeliveriesController < ApplicationController
     render json:@deliveries
   end
 
-    # POST /items
+    # POST /deliveries
   def create
 
     if params[:status] 
-      @delivery = Delivery.new(delivery_params)
+      @delivery = delivery1 = Delivery.create(status: params[:status] ,
+                                              sender_id: params[:sender_employee_id] ,
+                                              recipient_id: params[:recipient_employee_id] ,
+                                              source_id: params[:source_id] ,
+                                              destination_id: params[:destination_id])
+
+      params[:items_names].each do |item_name|
+
+        item1 = Item.create(name: item_name)
+        @delivery.items << item1
+      end
+
     else 
       @delivery = Delivery.new()
     end
@@ -73,6 +84,6 @@ class DeliveriesController < ApplicationController
     end
 
     def delivery_params
-      params.require(:delivery).permit(:status, :tracker, :sender_employee_id, :recipient_employee_id)
+      params.require(:delivery).permit(:status, :tracker, :sender_employee_id, :recipient_employee_id, :source_id, :destination_id, :items_names)
     end
 end
