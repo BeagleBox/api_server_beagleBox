@@ -7,14 +7,31 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Departament.create(departament_name:"Secretaria")
+Departament.create(departament_name:"Biblioteca")
+Departament.create(departament_name:"Enfermaria")
+Departament.create(departament_name:"Auditório")
 Departament.create(departament_name:"CPD")
-Employee.create(employee_name:'João', employee_registration:150132042, employee_email:'joaohenrique.p.almeida@gmail.com',password:"12345678", departament_id:1)
-Employee.create(employee_name:'Humberto', employee_registration:261243921, employee_email:'humberto@gmail.com',password:"12345678", departament_id:2)
-Employee.create(employee_name:'Elaine', employee_registration:561243921, employee_email:'elaine@gmail.com',password:"12345678", departament_id:1)
+
+Employee.create(employee_name:'João', employee_registration:150132042,
+  employee_email:'joaohenrique.p.almeida@gmail.com',password:"12345678", password_confirmation:"12345678",
+  departament_id:1, is_admin:false)
+Employee.create(employee_name:'Humberto', employee_registration:261243921,
+  employee_email:'humberto@gmail.com',password:"12345678", password_confirmation:"12345678",
+  departament_id:2, is_admin:false)
+Employee.create(employee_name:'Elaine', employee_registration:561243921,
+  employee_email:'elaine@gmail.com',password:"12345678", password_confirmation:"12345678",
+  departament_id:3, is_admin:true)
 
 
-employee1 = Employee.create(employee_name:'Yeltisin', employee_registration:561243921, employee_email:'yeltsin@gmail.com',password:"12345678", departament_id:1)
-employee2 = Employee.create(employee_name:'Gabriela', employee_registration:261243921, employee_email:'humberto@gmail.com',password:"12345678", departament_id:2)
+employee1 = Employee.create(employee_name:'Yeltisin', employee_registration:561243921,
+  employee_email:'yeltsin@gmail.com',password:"12345678", password_confirmation:"12345678",
+  departament_id:4, is_admin:false)
+employee2 = Employee.create(employee_name:'Gabriela', employee_registration:261243921,
+  employee_email:'humberto@gmail.com',password:"12345678", password_confirmation:"12345678",
+  departament_id:5, is_admin:false)
+
+item1 = Item.create(name: "Data Show")
+item2 = Item.create(name: "Cabo de Energia")
 
 hotSpot1 = Hotspot.create(name: "Secretaria", localization: "Predio 1")
 hotSpot2 = Hotspot.create(name: "Sala 4", localization: "Predio 2")
