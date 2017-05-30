@@ -33,6 +33,26 @@ class HotspotsController < ApplicationController
     @hotspot.destroy
   end
 
+  def search_delivery_by_sender
+
+    if params[:hotspot_id] != '0'
+      @hotsposts = Hotspot.where(id: params[:hotspot_id])
+    else
+      @hotsposts = Hotspot.all
+    end
+
+    render :json => @hotsposts.to_json(:include => :sources)
+  end
+
+  def hotspot_names
+      @hotsposts = Hotspot.all
+      @hotspot_names = []
+      @hotsposts.each { |d|
+        @hotspot_names << d.name
+      }
+      render json:@hotspot_names
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_hotspot

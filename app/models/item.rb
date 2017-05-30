@@ -1,3 +1,3 @@
 class Item < ApplicationRecord
-  belongs_to :delivery, optional: true
+  belongs_to :delivery
 end

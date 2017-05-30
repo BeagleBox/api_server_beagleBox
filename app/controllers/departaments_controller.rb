@@ -13,6 +13,17 @@ class DepartamentsController < ApplicationController
     render json:(@departament)
   end
 
+   # POST /departaments
+  def create
+    @departament = Departament.new(departament_params)
+
+    if @departament.save
+      render json:(@departament), status: :created, location: @departament
+    else
+      render json: @departament.errors, status: :unprocessable_entity
+    end
+  end
+
   # PUT /departaments/:id
   def update
     @departament.update(departament_params)

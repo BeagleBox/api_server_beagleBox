@@ -13,6 +13,17 @@ class EmployeesController < ApplicationController
     render json:(@employee)
   end
 
+  # POST /employees
+  def create
+    @employee = Employee.new(employee_params)
+
+    if @employee.save
+      render json:(@employee), status: :created, location: @employee
+    else
+      render json: @employee.errors, status: :unprocessable_entity
+    end
+  end
+
   # PUT /employees/:id
   def update
     @employee.update(employee_params)
