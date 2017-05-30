@@ -55,7 +55,7 @@ class EmployeesController < ApplicationController
 
   def employee_params
     # whitelist params
-    params.permit(:employee_name,:employee_registration,:password,:password_digest,:employee_email)
+    params.permit(:employee_name,:employee_registration,:password,:password_confirmation,:employee_email,:employee,:departament_id)
   end
 
   def set_employee
