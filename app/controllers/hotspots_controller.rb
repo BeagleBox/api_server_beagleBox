@@ -38,7 +38,7 @@ class HotspotsController < ApplicationController
     if params[:hotspot_id] != '0'
       @hotsposts = Hotspot.where(id: params[:hotspot_id])
     else
-      @hotsposts = Hotspot.all
+      # @hotsposts = Hotspot.all
     end
 
     render :json => @hotsposts.to_json(:include => :sources)

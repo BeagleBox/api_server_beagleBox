@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :monitorings
   resources :routes
   resources :hotspots
   resources :items

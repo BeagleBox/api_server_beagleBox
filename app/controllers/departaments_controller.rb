@@ -26,13 +26,13 @@ class DepartamentsController < ApplicationController
 
   def search_delivery_by_source
 
-    if params[:departament_id] != '0'
-      @departaments = Departament.where(id: params[:departament_id])
-    else
-      @departaments = Departament.all
+    @deliveries = Delivery.where(source_id: params[:departament_id])
+
+    if @deliveries.empty?
+      @deliveries = Delivery.all
     end
 
-    render :json => @departaments.to_json(:include => :sources)
+    render :json => @deliveries.to_json
   end
 
   # PUT /departaments/:id
