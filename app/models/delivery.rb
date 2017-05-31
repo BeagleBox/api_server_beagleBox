@@ -8,8 +8,8 @@ class Delivery < ApplicationRecord
 	belongs_to :sender,    :class_name => "Employee", optional: true
 	belongs_to :recipient, :class_name => "Employee", optional: true
 
-	belongs_to :source,      :class_name => "Hotspot", optional: true
-	belongs_to :destination, :class_name => "Hotspot", optional: true
+	belongs_to :source,      :class_name => "Departament", optional: true
+	belongs_to :destination, :class_name => "Departament", optional: true
 
 	has_many :items
 

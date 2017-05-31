@@ -24,6 +24,17 @@ class DepartamentsController < ApplicationController
     end
   end
 
+  def search_delivery_by_source
+
+    if params[:departament_id] != '0'
+      @departaments = Departament.where(id: params[:departament_id])
+    else
+      @departaments = Departament.all
+    end
+
+    render :json => @departaments.to_json(:include => :sources)
+  end
+
   # PUT /departaments/:id
   def update
     @departament.update(departament_params)
@@ -50,7 +61,7 @@ class DepartamentsController < ApplicationController
 
   def departament_params
     # whitelist params
-    params.permit(:departament_name)
+    params.fetch(:departament, {})
   end
 
   def set_departament

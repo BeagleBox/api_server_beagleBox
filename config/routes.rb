@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get '/search_routes_by_source_destination/:source_id/:destination_id', to: 'routes#search_routes_by_source_destination'
   get '/search_delivery_by_route/:route', to: 'deliveries#search_delivery_by_route'
 
-  get '/search_delivery_by_sender/:hotspot_id', to: 'hotspots#search_delivery_by_sender'
+  get '/search_delivery_by_source/:departament_id', to: 'departaments#search_delivery_by_source'
   get '/hotspot_names', to: 'hotspots#hotspot_names'
   
   post 'login', to: 'authentication#authenticate'

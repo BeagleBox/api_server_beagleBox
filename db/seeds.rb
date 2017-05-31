@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Departament.create(departament_name:"Secretaria")
-Departament.create(departament_name:"Biblioteca")
+departament1 = Departament.create(departament_name:"Secretaria")
+departament2 = Departament.create(departament_name:"Biblioteca")
 Departament.create(departament_name:"Enfermaria")
 Departament.create(departament_name:"Auditório")
 Departament.create(departament_name:"CPD")
@@ -33,14 +33,14 @@ employee2 = Employee.create(employee_name:'Gabriela', employee_registration:2612
 item1 = Item.create(name: "Data Show")
 item2 = Item.create(name: "Cabo de Energia")
 
-hotSpot1 = Hotspot.create(name: "Secretaria", localization: "Predio 1")
-hotSpot2 = Hotspot.create(name: "Sala 4", localization: "Predio 2")
+# hotSpot1 = Hotspot.create(name: "Secretaria", localization: "Predio 1")
+# hotSpot2 = Hotspot.create(name: "Sala 4", localization: "Predio 2")
 
-Route.create(name: "Route 1", source_id: hotSpot1.id, destination_id: hotSpot2.id)
+Route.create(name: "Route 1", source_id: departament1.id, destination_id: departament2.id)
 
 delivery1 = Delivery.create(status: "Em Trânsito",
 							sender_id: employee1.id,
 							recipient_id: employee2.id,
-							source_id: hotSpot1.id,
-							destination_id: hotSpot2.id)
+							source_id: departament1.id,
+							destination_id: departament2.id)
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170517204338) do
+ActiveRecord::Schema.define(version: 20170524143213) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -83,6 +83,13 @@ ActiveRecord::Schema.define(version: 20170517204338) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["delivery_id"], name: "index_items_on_delivery_id", using: :btree
+  end
+
+  create_table "monitorings", force: :cascade do |t|
+    t.decimal  "weight"
+    t.decimal  "battery_percentage"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   create_table "routes", force: :cascade do |t|
