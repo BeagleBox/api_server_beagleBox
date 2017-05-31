@@ -44,3 +44,9 @@ delivery1 = Delivery.create(status: "Em Trânsito",
 							source_id: departament1.id,
 							destination_id: departament2.id)
 
+delivery2 = Delivery.create(status: "Aguardando",
+              sender_id: employee1.id,
+              recipient_id: employee2.id,
+              source_id: departament1.id,
+              destination_id: departament2.id)
+

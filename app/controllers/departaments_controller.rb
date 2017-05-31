@@ -32,7 +32,7 @@ class DepartamentsController < ApplicationController
       @deliveries = Delivery.all
     end
 
-    render :json => @deliveries.to_json
+    render json:@deliveries
   end
 
   # PUT /departaments/:id
