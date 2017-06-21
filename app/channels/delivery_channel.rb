@@ -6,8 +6,10 @@ class DeliveryChannel < ApplicationCable::Channel
   def unsubscribed
   end
 
-  def start_delivery
-    
+  def start_delivery(data)
+    puts data
+    puts data["message"]
+
   end
 
   def finish_delivery

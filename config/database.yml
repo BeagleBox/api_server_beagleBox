@@ -7,13 +7,13 @@
 
 
 # Passo a passo para executar o projeto
-# Observacao: Passos 1 e 2 devem ser exdcutados apenas uma vez! 
+# Observacao: Passos 1 e 2 devem ser exdcutados apenas uma vez!
 
 # (1) Configuracao do banco com o postgresql
 # $ sudo -u postgres psql postgres
 # $ CREATE DATABASE db_development;
 # $ \connect db_development;
-# $ CREATE USER beaglebox2 WITH PASSWORD 'beaglebox';
+# $ CREATE USER beaglebox2 WITH PASSWORD 'beaglebox' SUPERUSER;
 # $ \q
 
 # (2)Inicializando o banco

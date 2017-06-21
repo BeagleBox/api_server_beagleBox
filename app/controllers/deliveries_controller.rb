@@ -15,26 +15,25 @@ class DeliveriesController < ApplicationController
     # POST /deliveries
   def create
 
-    if params[:status] 
+    if params[:status]
       @delivery = delivery1 = Delivery.create(status: params[:status] ,
-                                              sender_id: params[:sender_employee_id] ,
+                                              sender_id: params[:sender_id] ,
                                               recipient_id: params[:recipient_employee_id] ,
                                               source_id: params[:source_id] ,
                                               destination_id: params[:destination_id])
 
-      params[:items_names].each do |item_name|
-
+      params[:itens_names].each do |item_name|
         item1 = Item.create(name: item_name)
         @delivery.items << item1
       end
 
-    else 
+    else
       @delivery = Delivery.new()
     end
 
     if @delivery.save
       # render :show, status: :created, location: @delivery
-      render json: @delivery.to_json 
+      render json: @delivery.to_json
     else
       render json: @delivery.errors, status: :unprocessable_entity
     end

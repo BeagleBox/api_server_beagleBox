@@ -27,4 +27,9 @@ class Delivery < ApplicationRecord
 	def inform_create_delivery
 		DeliveryJob.perform_later self
 	end
+
+	# def inform_create_delivery
+	# 	DeliveryJob.start_delivery_later self
+	# end
+
 end
