@@ -7,9 +7,7 @@ class DeliveryChannel < ApplicationCable::Channel
   end
 
   def start_delivery(data)
-    puts data
-    puts data["message"]
-
+  
   end
 
   def finish_delivery
@@ -23,5 +21,11 @@ class DeliveryChannel < ApplicationCable::Channel
 
   def get_sensors
   end
+
+  private
+    def render_message (message)
+       message
+    end
+
 
 end

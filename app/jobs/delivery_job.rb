@@ -2,15 +2,21 @@ class DeliveryJob < ApplicationJob
   queue_as :default
 
   def perform(message)
-    ActionCable.server.broadcast 'delivery_channel', message:render_message("message")
-  end
+    puts " ----- id user"
+    puts message["recipient_id"]
 
-  def start_delivery (message)
-    ActionCable.server.broadcast 'delivery_channel', message:render_message("ooooooooooooooooooooo")
+    id = message["recipient_id"]
+    @user = Employee.find_by(id: message["recipient_id"])
+    puts " ----- CONTACTS"
+    puts @user.contacts[0]["contact_description"]
+    puts "perform Delivery Job"
+    ActionCable.server.broadcast 'delivery_channel', message:render_message(@user.contacts[0]["contact_description"])
   end
 
 private
   def render_message (message)
-    message.json
+      message << { type: "John" }
+      puts message
+      return message
   end
 end
