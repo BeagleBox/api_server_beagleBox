@@ -1,6 +1,6 @@
 class Delivery < ApplicationRecord
 
-	after_create :set_tracker_id, :set_delivery_route
+	after_create :set_default_values, :set_delivery_route
 	after_commit :inform_create_delivery
 
 	belongs_to :route, :class_name => "Route", optional: true
@@ -13,8 +13,9 @@ class Delivery < ApplicationRecord
 
 	has_many :items
 
-	def set_tracker_id
+	def set_default_values
    		update_column(:tracker, "DLV#{self.id}")
+   		update_column(:type,    "delivery")
 	end
 
 	def set_delivery_route
