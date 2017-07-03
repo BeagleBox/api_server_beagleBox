@@ -15,7 +15,7 @@ class DeliveriesController < ApplicationController
     # POST /deliveries
   def create
 
-    @delivery = delivery1 = Delivery.create(status: params[:status] ,
+    @delivery = delivery1 = Delivery.new(status: params[:status] ,
                                               sender_id: params[:sender_id] ,
                                               recipient_id: params[:recipient_id] ,
                                               source_id: params[:source_id] ,
@@ -28,7 +28,7 @@ class DeliveriesController < ApplicationController
       end
 
     if @delivery.save
-      render json: @delivery.to_json
+      render json: @delivery, include:'sender'
     else
       render json: @delivery.errors, status: :unprocessable_entity
     end

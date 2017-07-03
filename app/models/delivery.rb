@@ -13,9 +13,12 @@ class Delivery < ApplicationRecord
 
 	has_many :items
 
+
+
+
 	def set_default_values
    		update_column(:tracker, "DLV#{self.id}")
-   		update_column(:type,    "delivery")
+   		update_column(:message_type,"Delivery")
 	end
 
 	def set_delivery_route
@@ -27,7 +30,6 @@ class Delivery < ApplicationRecord
 
 private
 	def inform_create_delivery
-		StartDeliveryJob.perform_later self
 		DeliveryJob.perform_later self
 	end
 

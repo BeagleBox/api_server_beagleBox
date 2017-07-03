@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20170524143213) do
   end
 
   create_table "deliveries", force: :cascade do |t|
+    t.string   "message_type"
     t.string   "status"
     t.string   "tracker"
     t.integer  "route_id"

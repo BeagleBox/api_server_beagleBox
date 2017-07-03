@@ -3,7 +3,7 @@ class StartDeliveryJob < ApplicationJob
 
   def perform(message)
     puts "perform Start Delivery Job"
-    ActionCable.server.broadcast 'delivery_channel', message:render_message(message)
+
   end
 
   private
