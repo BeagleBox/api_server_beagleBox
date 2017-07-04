@@ -21,8 +21,8 @@ joao.contacts.create(contact_description:"5561991793268")
 
 humberto = Employee.create(employee_name:'Humberto', employee_registration:261243921,
   employee_email:'humberto@gmail.com', password:"12345678", password_confirmation:"12345678",
-  departament_id:2, is_admin:false)
-humberto.contacts.create(contact_description:"5561991793268")
+  departament_id:2, is_admin:true)
+humberto.contacts.create(contact_description:"5561981701771")
 
 
 elaine = Employee.create(employee_name:'Elaine', employee_registration:561243921,
@@ -33,6 +33,12 @@ elaine.contacts.create(contact_description:"5561991793268")
 employee1 = Employee.create(employee_name:'Yeltsin', employee_registration:561243921,
   employee_email:'yeltsin@gmail.com', password:"12345678", password_confirmation:"12345678",
   departament_id:4, is_admin:false)
+
+employee3 = Employee.create(employee_name:'Tiago Euler', employee_registration:561243925,
+    employee_email:'tiagoe@gmail.com', password:"12345678", password_confirmation:"12345678",
+    departament_id:4, is_admin:true)
+employee3.contacts.create(contact_description:"5561992326654")
+
 employee2 = Employee.create(employee_name:'Gabriela', employee_registration:261243921,
   employee_email:'humberto@gmail.com', password:"12345678", password_confirmation:"12345678",
   departament_id:5, is_admin:false)

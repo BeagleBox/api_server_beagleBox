@@ -1,0 +1,447 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'i', 'action-cable-react' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData action-cable-react
+8 silly fetchNamedPackageData action-cable-react
+9 silly mapToRegistry name action-cable-react
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'action-cable-react',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'action-cable-react',
+12 silly mapToRegistry   name: 'action-cable-react',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/action-cable-react
+14 verbose request uri https://registry.npmjs.org/action-cable-react
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 1:00:28 PM
+17 verbose request id b92841b3a22d45fc
+18 verbose etag W/"5909382c-2a2a"
+19 verbose lastModified Wed, 03 May 2017 01:53:48 GMT
+20 http request GET https://registry.npmjs.org/action-cable-react
+21 http 304 https://registry.npmjs.org/action-cable-react
+22 verbose headers { date: 'Tue, 04 Jul 2017 16:00:29 GMT',
+22 verbose headers   via: '1.1 varnish',
+22 verbose headers   'cache-control': 'max-age=300',
+22 verbose headers   etag: 'W/"5909382c-2a2a"',
+22 verbose headers   age: '81',
+22 verbose headers   connection: 'keep-alive',
+22 verbose headers   'x-served-by': 'cache-atl6241-ATL',
+22 verbose headers   'x-cache': 'HIT',
+22 verbose headers   'x-cache-hits': '1',
+22 verbose headers   'x-timer': 'S1499184029.408317,VS0,VE0',
+22 verbose headers   vary: 'Accept-Encoding' }
+23 silly get cb [ 304,
+23 silly get   { date: 'Tue, 04 Jul 2017 16:00:29 GMT',
+23 silly get     via: '1.1 varnish',
+23 silly get     'cache-control': 'max-age=300',
+23 silly get     etag: 'W/"5909382c-2a2a"',
+23 silly get     age: '81',
+23 silly get     connection: 'keep-alive',
+23 silly get     'x-served-by': 'cache-atl6241-ATL',
+23 silly get     'x-cache': 'HIT',
+23 silly get     'x-cache-hits': '1',
+23 silly get     'x-timer': 'S1499184029.408317,VS0,VE0',
+23 silly get     vary: 'Accept-Encoding' } ]
+24 verbose etag https://registry.npmjs.org/action-cable-react from cache
+25 verbose get saving action-cable-react to /home/joaohenrique/.npm/registry.npmjs.org/action-cable-react/.cache.json
+26 verbose correctMkdir /home/joaohenrique/.npm correctMkdir not in flight; initializing
+27 silly install normalizeTree
+28 silly loadCurrentTree Finishing
+29 silly loadIdealTree Starting
+30 silly install loadIdealTree
+31 silly cloneCurrentTree Starting
+32 silly install cloneCurrentTreeToIdealTree
+33 silly cloneCurrentTree Finishing
+34 silly loadShrinkwrap Starting
+35 silly install loadShrinkwrap
+36 silly loadShrinkwrap Finishing
+37 silly loadAllDepsIntoIdealTree Starting
+38 silly install loadAllDepsIntoIdealTree
+39 silly resolveWithNewModule action-cable-react@0.1.1 checking installable status
+40 silly cache add args [ 'action-cable-react', null ]
+41 verbose cache add spec action-cable-react
+42 silly cache add parsed spec Result {
+42 silly cache add   raw: 'action-cable-react',
+42 silly cache add   scope: null,
+42 silly cache add   escapedName: 'action-cable-react',
+42 silly cache add   name: 'action-cable-react',
+42 silly cache add   rawSpec: '',
+42 silly cache add   spec: 'latest',
+42 silly cache add   type: 'tag' }
+43 silly addNamed action-cable-react@latest
+44 verbose addNamed "latest" is being treated as a dist-tag for action-cable-react
+45 info addNameTag [ 'action-cable-react', 'latest' ]
+46 silly mapToRegistry name action-cable-react
+47 silly mapToRegistry using default registry
+48 silly mapToRegistry registry https://registry.npmjs.org/
+49 silly mapToRegistry data Result {
+49 silly mapToRegistry   raw: 'action-cable-react',
+49 silly mapToRegistry   scope: null,
+49 silly mapToRegistry   escapedName: 'action-cable-react',
+49 silly mapToRegistry   name: 'action-cable-react',
+49 silly mapToRegistry   rawSpec: '',
+49 silly mapToRegistry   spec: 'latest',
+49 silly mapToRegistry   type: 'tag' }
+50 silly mapToRegistry uri https://registry.npmjs.org/action-cable-react
+51 verbose addNameTag registry:https://registry.npmjs.org/action-cable-react not in flight; fetching
+52 verbose get https://registry.npmjs.org/action-cable-react not expired, no request
+53 silly addNameTag next cb for action-cable-react with tag latest
+54 silly addNamed action-cable-react@0.1.1
+55 verbose addNamed "0.1.1" is a plain semver version for action-cable-react
+56 warn deprecated action-cable-react@0.1.1: Package is no longer maintained. Recommend replacing with react-actioncable-provider which offers similar functionality using a higher-order component and is up to date with latest versions of react/rails.
+57 silly cache afterAdd action-cable-react@0.1.1
+58 verbose afterAdd /home/joaohenrique/.npm/action-cable-react/0.1.1/package/package.json not in flight; writing
+59 verbose correctMkdir /home/joaohenrique/.npm correctMkdir not in flight; initializing
+60 verbose afterAdd /home/joaohenrique/.npm/action-cable-react/0.1.1/package/package.json written
+61 silly fetchNamedPackageData eventemitter3
+62 silly mapToRegistry name eventemitter3
+63 silly mapToRegistry using default registry
+64 silly mapToRegistry registry https://registry.npmjs.org/
+65 silly mapToRegistry data Result {
+65 silly mapToRegistry   raw: 'eventemitter3',
+65 silly mapToRegistry   scope: null,
+65 silly mapToRegistry   escapedName: 'eventemitter3',
+65 silly mapToRegistry   name: 'eventemitter3',
+65 silly mapToRegistry   rawSpec: '',
+65 silly mapToRegistry   spec: 'latest',
+65 silly mapToRegistry   type: 'tag' }
+66 silly mapToRegistry uri https://registry.npmjs.org/eventemitter3
+67 silly fetchNamedPackageData lodash.capitalize
+68 silly mapToRegistry name lodash.capitalize
+69 silly mapToRegistry using default registry
+70 silly mapToRegistry registry https://registry.npmjs.org/
+71 silly mapToRegistry data Result {
+71 silly mapToRegistry   raw: 'lodash.capitalize',
+71 silly mapToRegistry   scope: null,
+71 silly mapToRegistry   escapedName: 'lodash.capitalize',
+71 silly mapToRegistry   name: 'lodash.capitalize',
+71 silly mapToRegistry   rawSpec: '',
+71 silly mapToRegistry   spec: 'latest',
+71 silly mapToRegistry   type: 'tag' }
+72 silly mapToRegistry uri https://registry.npmjs.org/lodash.capitalize
+73 verbose request uri https://registry.npmjs.org/eventemitter3
+74 verbose request no auth needed
+75 info attempt registry request try #1 at 1:00:29 PM
+76 verbose etag W/"59115ac6-8722"
+77 verbose lastModified Tue, 09 May 2017 05:59:34 GMT
+78 http request GET https://registry.npmjs.org/eventemitter3
+79 verbose request uri https://registry.npmjs.org/lodash.capitalize
+80 verbose request no auth needed
+81 info attempt registry request try #1 at 1:00:29 PM
+82 verbose etag W/"57f67f94-52b0"
+83 verbose lastModified Thu, 06 Oct 2016 16:45:08 GMT
+84 http request GET https://registry.npmjs.org/lodash.capitalize
+85 http 304 https://registry.npmjs.org/eventemitter3
+86 verbose headers { date: 'Tue, 04 Jul 2017 16:00:29 GMT',
+86 verbose headers   via: '1.1 varnish',
+86 verbose headers   'cache-control': 'max-age=300',
+86 verbose headers   etag: 'W/"59115ac6-8722"',
+86 verbose headers   age: '58',
+86 verbose headers   connection: 'keep-alive',
+86 verbose headers   'x-served-by': 'cache-atl6241-ATL',
+86 verbose headers   'x-cache': 'HIT',
+86 verbose headers   'x-cache-hits': '1',
+86 verbose headers   'x-timer': 'S1499184030.741391,VS0,VE1',
+86 verbose headers   vary: 'Accept-Encoding' }
+87 silly get cb [ 304,
+87 silly get   { date: 'Tue, 04 Jul 2017 16:00:29 GMT',
+87 silly get     via: '1.1 varnish',
+87 silly get     'cache-control': 'max-age=300',
+87 silly get     etag: 'W/"59115ac6-8722"',
+87 silly get     age: '58',
+87 silly get     connection: 'keep-alive',
+87 silly get     'x-served-by': 'cache-atl6241-ATL',
+87 silly get     'x-cache': 'HIT',
+87 silly get     'x-cache-hits': '1',
+87 silly get     'x-timer': 'S1499184030.741391,VS0,VE1',
+87 silly get     vary: 'Accept-Encoding' } ]
+88 verbose etag https://registry.npmjs.org/eventemitter3 from cache
+89 verbose get saving eventemitter3 to /home/joaohenrique/.npm/registry.npmjs.org/eventemitter3/.cache.json
+90 verbose correctMkdir /home/joaohenrique/.npm correctMkdir not in flight; initializing
+91 silly resolveWithNewModule eventemitter3@1.2.0 checking installable status
+92 silly cache add args [ 'eventemitter3@^1.1.1', null ]
+93 verbose cache add spec eventemitter3@^1.1.1
+94 silly cache add parsed spec Result {
+94 silly cache add   raw: 'eventemitter3@^1.1.1',
+94 silly cache add   scope: null,
+94 silly cache add   escapedName: 'eventemitter3',
+94 silly cache add   name: 'eventemitter3',
+94 silly cache add   rawSpec: '^1.1.1',
+94 silly cache add   spec: '>=1.1.1 <2.0.0',
+94 silly cache add   type: 'range' }
+95 silly addNamed eventemitter3@>=1.1.1 <2.0.0
+96 verbose addNamed ">=1.1.1 <2.0.0" is a valid semver range for eventemitter3
+97 silly addNameRange { name: 'eventemitter3',
+97 silly addNameRange   range: '>=1.1.1 <2.0.0',
+97 silly addNameRange   hasData: false }
+98 silly mapToRegistry name eventemitter3
+99 silly mapToRegistry using default registry
+100 silly mapToRegistry registry https://registry.npmjs.org/
+101 silly mapToRegistry data Result {
+101 silly mapToRegistry   raw: 'eventemitter3',
+101 silly mapToRegistry   scope: null,
+101 silly mapToRegistry   escapedName: 'eventemitter3',
+101 silly mapToRegistry   name: 'eventemitter3',
+101 silly mapToRegistry   rawSpec: '',
+101 silly mapToRegistry   spec: 'latest',
+101 silly mapToRegistry   type: 'tag' }
+102 silly mapToRegistry uri https://registry.npmjs.org/eventemitter3
+103 verbose addNameRange registry:https://registry.npmjs.org/eventemitter3 not in flight; fetching
+104 verbose get https://registry.npmjs.org/eventemitter3 not expired, no request
+105 silly addNameRange number 2 { name: 'eventemitter3', range: '>=1.1.1 <2.0.0', hasData: true }
+106 silly addNameRange versions [ 'eventemitter3',
+106 silly addNameRange   [ '0.0.0',
+106 silly addNameRange     '0.0.1',
+106 silly addNameRange     '0.1.0',
+106 silly addNameRange     '0.1.1',
+106 silly addNameRange     '0.1.2',
+106 silly addNameRange     '0.1.3',
+106 silly addNameRange     '0.1.4',
+106 silly addNameRange     '0.1.5',
+106 silly addNameRange     '0.1.6',
+106 silly addNameRange     '1.0.0',
+106 silly addNameRange     '1.0.1',
+106 silly addNameRange     '1.0.2',
+106 silly addNameRange     '1.0.3',
+106 silly addNameRange     '1.1.0',
+106 silly addNameRange     '1.1.1',
+106 silly addNameRange     '1.2.0',
+106 silly addNameRange     '2.0.0',
+106 silly addNameRange     '2.0.1',
+106 silly addNameRange     '2.0.2',
+106 silly addNameRange     '2.0.3' ] ]
+107 silly addNamed eventemitter3@1.2.0
+108 verbose addNamed "1.2.0" is a plain semver version for eventemitter3
+109 silly cache afterAdd eventemitter3@1.2.0
+110 verbose afterAdd /home/joaohenrique/.npm/eventemitter3/1.2.0/package/package.json not in flight; writing
+111 verbose correctMkdir /home/joaohenrique/.npm correctMkdir not in flight; initializing
+112 verbose afterAdd /home/joaohenrique/.npm/eventemitter3/1.2.0/package/package.json written
+113 http 304 https://registry.npmjs.org/lodash.capitalize
+114 verbose headers { date: 'Tue, 04 Jul 2017 16:00:30 GMT',
+114 verbose headers   via: '1.1 varnish',
+114 verbose headers   'cache-control': 'max-age=300',
+114 verbose headers   etag: 'W/"57f67f94-52b0"',
+114 verbose headers   age: '292',
+114 verbose headers   connection: 'keep-alive',
+114 verbose headers   'x-served-by': 'cache-atl6227-ATL',
+114 verbose headers   'x-cache': 'HIT',
+114 verbose headers   'x-cache-hits': '1',
+114 verbose headers   'x-timer': 'S1499184030.039548,VS0,VE1',
+114 verbose headers   vary: 'Accept-Encoding' }
+115 silly get cb [ 304,
+115 silly get   { date: 'Tue, 04 Jul 2017 16:00:30 GMT',
+115 silly get     via: '1.1 varnish',
+115 silly get     'cache-control': 'max-age=300',
+115 silly get     etag: 'W/"57f67f94-52b0"',
+115 silly get     age: '292',
+115 silly get     connection: 'keep-alive',
+115 silly get     'x-served-by': 'cache-atl6227-ATL',
+115 silly get     'x-cache': 'HIT',
+115 silly get     'x-cache-hits': '1',
+115 silly get     'x-timer': 'S1499184030.039548,VS0,VE1',
+115 silly get     vary: 'Accept-Encoding' } ]
+116 verbose etag https://registry.npmjs.org/lodash.capitalize from cache
+117 verbose get saving lodash.capitalize to /home/joaohenrique/.npm/registry.npmjs.org/lodash.capitalize/.cache.json
+118 verbose correctMkdir /home/joaohenrique/.npm correctMkdir not in flight; initializing
+119 silly resolveWithNewModule lodash.capitalize@3.1.2 checking installable status
+120 silly cache add args [ 'lodash.capitalize@^3.0.0', null ]
+121 verbose cache add spec lodash.capitalize@^3.0.0
+122 silly cache add parsed spec Result {
+122 silly cache add   raw: 'lodash.capitalize@^3.0.0',
+122 silly cache add   scope: null,
+122 silly cache add   escapedName: 'lodash.capitalize',
+122 silly cache add   name: 'lodash.capitalize',
+122 silly cache add   rawSpec: '^3.0.0',
+122 silly cache add   spec: '>=3.0.0 <4.0.0',
+122 silly cache add   type: 'range' }
+123 silly addNamed lodash.capitalize@>=3.0.0 <4.0.0
+124 verbose addNamed ">=3.0.0 <4.0.0" is a valid semver range for lodash.capitalize
+125 silly addNameRange { name: 'lodash.capitalize',
+125 silly addNameRange   range: '>=3.0.0 <4.0.0',
+125 silly addNameRange   hasData: false }
+126 silly mapToRegistry name lodash.capitalize
+127 silly mapToRegistry using default registry
+128 silly mapToRegistry registry https://registry.npmjs.org/
+129 silly mapToRegistry data Result {
+129 silly mapToRegistry   raw: 'lodash.capitalize',
+129 silly mapToRegistry   scope: null,
+129 silly mapToRegistry   escapedName: 'lodash.capitalize',
+129 silly mapToRegistry   name: 'lodash.capitalize',
+129 silly mapToRegistry   rawSpec: '',
+129 silly mapToRegistry   spec: 'latest',
+129 silly mapToRegistry   type: 'tag' }
+130 silly mapToRegistry uri https://registry.npmjs.org/lodash.capitalize
+131 verbose addNameRange registry:https://registry.npmjs.org/lodash.capitalize not in flight; fetching
+132 verbose get https://registry.npmjs.org/lodash.capitalize not expired, no request
+133 silly addNameRange number 2 { name: 'lodash.capitalize',
+133 silly addNameRange   range: '>=3.0.0 <4.0.0',
+133 silly addNameRange   hasData: true }
+134 silly addNameRange versions [ 'lodash.capitalize',
+134 silly addNameRange   [ '3.0.0',
+134 silly addNameRange     '4.0.0',
+134 silly addNameRange     '4.0.1',
+134 silly addNameRange     '4.0.2',
+134 silly addNameRange     '4.0.3',
+134 silly addNameRange     '4.1.0',
+134 silly addNameRange     '4.1.1',
+134 silly addNameRange     '3.1.0',
+134 silly addNameRange     '3.1.1',
+134 silly addNameRange     '3.1.2',
+134 silly addNameRange     '4.2.0',
+134 silly addNameRange     '4.2.1' ] ]
+135 silly addNamed lodash.capitalize@3.1.2
+136 verbose addNamed "3.1.2" is a plain semver version for lodash.capitalize
+137 silly cache afterAdd lodash.capitalize@3.1.2
+138 verbose afterAdd /home/joaohenrique/.npm/lodash.capitalize/3.1.2/package/package.json not in flight; writing
+139 verbose correctMkdir /home/joaohenrique/.npm correctMkdir not in flight; initializing
+140 verbose afterAdd /home/joaohenrique/.npm/lodash.capitalize/3.1.2/package/package.json written
+141 silly fetchNamedPackageData lodash._basetostring
+142 silly mapToRegistry name lodash._basetostring
+143 silly mapToRegistry using default registry
+144 silly mapToRegistry registry https://registry.npmjs.org/
+145 silly mapToRegistry data Result {
+145 silly mapToRegistry   raw: 'lodash._basetostring',
+145 silly mapToRegistry   scope: null,
+145 silly mapToRegistry   escapedName: 'lodash._basetostring',
+145 silly mapToRegistry   name: 'lodash._basetostring',
+145 silly mapToRegistry   rawSpec: '',
+145 silly mapToRegistry   spec: 'latest',
+145 silly mapToRegistry   type: 'tag' }
+146 silly mapToRegistry uri https://registry.npmjs.org/lodash._basetostring
+147 verbose request uri https://registry.npmjs.org/lodash._basetostring
+148 verbose request no auth needed
+149 info attempt registry request try #1 at 1:00:29 PM
+150 verbose etag W/"57f681ea-1900"
+151 verbose lastModified Thu, 06 Oct 2016 16:55:06 GMT
+152 http request GET https://registry.npmjs.org/lodash._basetostring
+153 http 304 https://registry.npmjs.org/lodash._basetostring
+154 verbose headers { date: 'Tue, 04 Jul 2017 16:00:30 GMT',
+154 verbose headers   via: '1.1 varnish',
+154 verbose headers   'cache-control': 'max-age=300',
+154 verbose headers   etag: 'W/"57f681ea-1900"',
+154 verbose headers   age: '22',
+154 verbose headers   connection: 'keep-alive',
+154 verbose headers   'x-served-by': 'cache-atl6241-ATL',
+154 verbose headers   'x-cache': 'HIT',
+154 verbose headers   'x-cache-hits': '1',
+154 verbose headers   'x-timer': 'S1499184030.226950,VS0,VE0',
+154 verbose headers   vary: 'Accept-Encoding' }
+155 silly get cb [ 304,
+155 silly get   { date: 'Tue, 04 Jul 2017 16:00:30 GMT',
+155 silly get     via: '1.1 varnish',
+155 silly get     'cache-control': 'max-age=300',
+155 silly get     etag: 'W/"57f681ea-1900"',
+155 silly get     age: '22',
+155 silly get     connection: 'keep-alive',
+155 silly get     'x-served-by': 'cache-atl6241-ATL',
+155 silly get     'x-cache': 'HIT',
+155 silly get     'x-cache-hits': '1',
+155 silly get     'x-timer': 'S1499184030.226950,VS0,VE0',
+155 silly get     vary: 'Accept-Encoding' } ]
+156 verbose etag https://registry.npmjs.org/lodash._basetostring from cache
+157 verbose get saving lodash._basetostring to /home/joaohenrique/.npm/registry.npmjs.org/lodash._basetostring/.cache.json
+158 verbose correctMkdir /home/joaohenrique/.npm correctMkdir not in flight; initializing
+159 silly resolveWithNewModule lodash._basetostring@3.0.1 checking installable status
+160 silly cache add args [ 'lodash._basetostring@^3.0.0', null ]
+161 verbose cache add spec lodash._basetostring@^3.0.0
+162 silly cache add parsed spec Result {
+162 silly cache add   raw: 'lodash._basetostring@^3.0.0',
+162 silly cache add   scope: null,
+162 silly cache add   escapedName: 'lodash._basetostring',
+162 silly cache add   name: 'lodash._basetostring',
+162 silly cache add   rawSpec: '^3.0.0',
+162 silly cache add   spec: '>=3.0.0 <4.0.0',
+162 silly cache add   type: 'range' }
+163 silly addNamed lodash._basetostring@>=3.0.0 <4.0.0
+164 verbose addNamed ">=3.0.0 <4.0.0" is a valid semver range for lodash._basetostring
+165 silly addNameRange { name: 'lodash._basetostring',
+165 silly addNameRange   range: '>=3.0.0 <4.0.0',
+165 silly addNameRange   hasData: false }
+166 silly mapToRegistry name lodash._basetostring
+167 silly mapToRegistry using default registry
+168 silly mapToRegistry registry https://registry.npmjs.org/
+169 silly mapToRegistry data Result {
+169 silly mapToRegistry   raw: 'lodash._basetostring',
+169 silly mapToRegistry   scope: null,
+169 silly mapToRegistry   escapedName: 'lodash._basetostring',
+169 silly mapToRegistry   name: 'lodash._basetostring',
+169 silly mapToRegistry   rawSpec: '',
+169 silly mapToRegistry   spec: 'latest',
+169 silly mapToRegistry   type: 'tag' }
+170 silly mapToRegistry uri https://registry.npmjs.org/lodash._basetostring
+171 verbose addNameRange registry:https://registry.npmjs.org/lodash._basetostring not in flight; fetching
+172 verbose get https://registry.npmjs.org/lodash._basetostring not expired, no request
+173 silly addNameRange number 2 { name: 'lodash._basetostring',
+173 silly addNameRange   range: '>=3.0.0 <4.0.0',
+173 silly addNameRange   hasData: true }
+174 silly addNameRange versions [ 'lodash._basetostring', [ '3.0.0', '3.0.1', '4.12.0' ] ]
+175 silly addNamed lodash._basetostring@3.0.1
+176 verbose addNamed "3.0.1" is a plain semver version for lodash._basetostring
+177 silly cache afterAdd lodash._basetostring@3.0.1
+178 verbose afterAdd /home/joaohenrique/.npm/lodash._basetostring/3.0.1/package/package.json not in flight; writing
+179 verbose correctMkdir /home/joaohenrique/.npm correctMkdir not in flight; initializing
+180 verbose afterAdd /home/joaohenrique/.npm/lodash._basetostring/3.0.1/package/package.json written
+181 silly loadAllDepsIntoIdealTree Finishing
+182 silly loadIdealTree Finishing
+183 silly currentTree api_server_beagleBox
+183 silly currentTree ├── action-cable-react@0.1.1
+183 silly currentTree ├── eventemitter3@1.2.0
+183 silly currentTree ├── lodash._basetostring@3.0.1
+183 silly currentTree └── lodash.capitalize@3.1.2
+184 silly idealTree api_server_beagleBox
+184 silly idealTree ├── action-cable-react@0.1.1
+184 silly idealTree ├── eventemitter3@1.2.0
+184 silly idealTree ├── lodash._basetostring@3.0.1
+184 silly idealTree └── lodash.capitalize@3.1.2
+185 silly generateActionsToTake Starting
+186 silly install generateActionsToTake
+187 warn checkPermissions Missing write access to /home/joaohenrique/Git/BeagleBox/api_server_beagleBox/node_modules
+188 silly rollbackFailedOptional Starting
+189 silly rollbackFailedOptional Finishing
+190 silly runTopLevelLifecycles Finishing
+191 silly install printInstalled
+192 warn enoent ENOENT: no such file or directory, open '/home/joaohenrique/Git/BeagleBox/api_server_beagleBox/package.json'
+193 verbose enoent ENOENT: no such file or directory, open '/home/joaohenrique/Git/BeagleBox/api_server_beagleBox/package.json'
+193 verbose enoent This is most likely not a problem with npm itself
+193 verbose enoent and is related to npm not being able to find a file.
+194 warn api_server_beagleBox No description
+195 verbose If you need help, you may report this error at:
+195 verbose     <https://github.com/npm/npm/issues>
+196 warn api_server_beagleBox No repository field.
+197 verbose If you need help, you may report this error at:
+197 verbose     <https://github.com/npm/npm/issues>
+198 warn api_server_beagleBox No README data
+199 verbose If you need help, you may report this error at:
+199 verbose     <https://github.com/npm/npm/issues>
+200 warn api_server_beagleBox No license field.
+201 verbose If you need help, you may report this error at:
+201 verbose     <https://github.com/npm/npm/issues>
+202 verbose stack Error: EACCES: permission denied, access '/home/joaohenrique/Git/BeagleBox/api_server_beagleBox/node_modules'
+202 verbose stack     at Error (native)
+203 verbose cwd /home/joaohenrique/Git/BeagleBox/api_server_beagleBox
+204 error Linux 4.8.0-56-generic
+205 error argv "/usr/bin/nodejs" "/usr/bin/npm" "i" "action-cable-react"
+206 error node v6.11.0
+207 error npm  v3.10.10
+208 error path /home/joaohenrique/Git/BeagleBox/api_server_beagleBox/node_modules
+209 error code EACCES
+210 error errno -13
+211 error syscall access
+212 error Error: EACCES: permission denied, access '/home/joaohenrique/Git/BeagleBox/api_server_beagleBox/node_modules'
+212 error     at Error (native)
+212 error  { Error: EACCES: permission denied, access '/home/joaohenrique/Git/BeagleBox/api_server_beagleBox/node_modules'
+212 error     at Error (native)
+212 error   errno: -13,
+212 error   code: 'EACCES',
+212 error   syscall: 'access',
+212 error   path: '/home/joaohenrique/Git/BeagleBox/api_server_beagleBox/node_modules' }
+213 error Please try running this command again as root/Administrator.
+214 verbose exit [ -13, true ]

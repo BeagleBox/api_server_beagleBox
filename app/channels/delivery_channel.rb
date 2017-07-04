@@ -7,7 +7,7 @@ class DeliveryChannel < ApplicationCable::Channel
   end
 
   def start_delivery(data)
-  
+
   end
 
   def finish_delivery
@@ -17,9 +17,6 @@ class DeliveryChannel < ApplicationCable::Channel
   end
 
   def lock_car
-  end
-
-  def get_sensors
   end
 
   private
