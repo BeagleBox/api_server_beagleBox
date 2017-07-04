@@ -12,16 +12,23 @@ Departament.create(departament_name:"Enfermaria")
 Departament.create(departament_name:"Auditório")
 Departament.create(departament_name:"CPD")
 
-Employee.create(employee_name:'João', employee_registration:150132042,
+joao = Employee.create(employee_name:'João', employee_registration:150132042,
   employee_email:'joaohenrique@gmail.com', password:"12345678", password_confirmation:"12345678",
   departament_id:1, is_admin:false)
-Employee.create(employee_name:'Humberto', employee_registration:261243921,
+
+joao.contacts.create(contact_description:"5561991793268")
+
+
+humberto = Employee.create(employee_name:'Humberto', employee_registration:261243921,
   employee_email:'humberto@gmail.com', password:"12345678", password_confirmation:"12345678",
   departament_id:2, is_admin:false)
-Employee.create(employee_name:'Elaine', employee_registration:561243921,
+humberto.contacts.create(contact_description:"5561991793268")
+
+
+elaine = Employee.create(employee_name:'Elaine', employee_registration:561243921,
   employee_email:'elaine@gmail.com', password:"12345678", password_confirmation:"12345678",
   departament_id:3, is_admin:true)
-
+elaine.contacts.create(contact_description:"5561991793268")
 
 employee1 = Employee.create(employee_name:'Yeltsin', employee_registration:561243921,
   employee_email:'yeltsin@gmail.com', password:"12345678", password_confirmation:"12345678",
@@ -49,4 +56,3 @@ delivery2 = Delivery.create(status: "Aguardando",
               recipient_id: employee2.id,
               source_id: departament1.id,
               destination_id: departament2.id)
-

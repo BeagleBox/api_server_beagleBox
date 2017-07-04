@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :employees
   resources :departaments
   resources :admins
+  resources :contacts
 
   get '/employees/search/:name', to: 'employees#search_employees'
   get '/employees/search_departament/:departament', to: 'employees#search_employees_by_departament'
@@ -19,7 +20,7 @@ Rails.application.routes.draw do
 
   get '/search_delivery_by_source/:departament_id', to: 'departaments#search_delivery_by_source'
   get '/hotspot_names', to: 'hotspots#hotspot_names'
-  
+
   post 'login', to: 'authentication#authenticate'
 
   #get names of departaments as string
