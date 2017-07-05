@@ -32,6 +32,10 @@ class DepartamentsController < ApplicationController
     #   @deliveries = Delivery.all
     # end
 
+    if params[:departament_id] == "all"
+      @deliveries = Delivery.all
+    end
+
     render json:@deliveries
   end
 
