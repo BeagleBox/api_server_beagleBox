@@ -39,6 +39,19 @@ employee3 = Employee.create(employee_name:'Tiago Euler', employee_registration:5
     departament_id:4, is_admin:true)
 employee3.contacts.create(contact_description:"5561992326654")
 
+
+employee4 = Employee.create(employee_name:'Gabriela', employee_registration:511243925,
+    employee_email:'gabriela@gmail.com', password:"12345678", password_confirmation:"12345678",
+    departament_id:1, is_admin:true)
+employee4.contacts.create(contact_description:"5561982719722")
+
+employee4 = Employee.create(employee_name:'Beatriz', employee_registration:511143925,
+    employee_email:'beatriz@gmail.com', password:"12345678", password_confirmation:"12345678",
+    departament_id:1, is_admin:true)
+employee4.contacts.create(contact_description:"5561996510204")
+
+
+
 employee2 = Employee.create(employee_name:'Gabriela', employee_registration:261243921,
   employee_email:'humberto@gmail.com', password:"12345678", password_confirmation:"12345678",
   departament_id:5, is_admin:false)
