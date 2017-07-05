@@ -1,5 +1,5 @@
 class DeliverySerializer < ActiveModel::Serializer
-  attributes :id, :type, :status, :created_at, :updated_at, :tracker, :route, :sender, :recipient
+  attributes :id, :type, :status, :created_at, :updated_at, :tracker, :route, :sender, :recipient, :key_access
   belongs_to :source
   belongs_to :destination
 
