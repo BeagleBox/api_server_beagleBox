@@ -16,13 +16,14 @@ class EmployeesController < ApplicationController
   # POST /employees
   def create
     @employee = Employee.new(employee_params)
-    @employee.contacts.create(contact_description: params[:contact_description])
 
     if @employee.save
       render json:(@employee), status: :created, location: @employee
     else
       render json: @employee.errors, status: :unprocessable_entity
     end
+
+    @employee.contacts.create(contact_description: params[:contact_description])
   end
 
   # PUT /employees/:id
