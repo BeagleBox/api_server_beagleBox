@@ -28,9 +28,9 @@ class DepartamentsController < ApplicationController
 
     @deliveries = Delivery.where(source_id: params[:departament_id])
 
-    if @deliveries.empty?
-      @deliveries = Delivery.all
-    end
+    # if @deliveries.empty?
+    #   @deliveries = Delivery.all
+    # end
 
     render json:@deliveries
   end
