@@ -20,7 +20,7 @@ class DeliveriesController < ApplicationController
                                               recipient_id:   params[:recipient_id] ,
                                               source_id:      params[:source_id] ,
                                               destination_id: params[:destination_id],
-                                              key_access:     params[:key_access)
+                                              key_access:     params[:key_access])
 
       params[:itens_names].each do |item_name|
         puts '-----------------------------///-------------'
