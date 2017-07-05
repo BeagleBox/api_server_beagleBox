@@ -59,8 +59,8 @@ class DeliveriesController < ApplicationController
 
     if params[:route] != '0'
       @deliveries = Delivery.where(route_id: params[:route])
-    else
-      @deliveries = Delivery.all
+    # else
+      # @deliveries = Delivery.all
     end
 
     render json:@deliveries
