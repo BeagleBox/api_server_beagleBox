@@ -34,6 +34,10 @@ class MonitoringsController < ApplicationController
     end
   end
 
+  def battery_callback
+    Monitoring.create()
+  end
+
   # DELETE /monitorings/1
   # DELETE /monitorings/1.json
   def destroy
