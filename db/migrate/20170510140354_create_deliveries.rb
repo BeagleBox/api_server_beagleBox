@@ -5,6 +5,7 @@ class CreateDeliveries < ActiveRecord::Migration[5.0]
       t.string :status
       t.string :tracker
       t.string :key_access
+      t.string :open
       t.belongs_to :route, index: true
 
       t.timestamps

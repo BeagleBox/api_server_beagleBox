@@ -79,6 +79,6 @@ class DeliveriesController < ApplicationController
     end
 
     def delivery_params
-      params.require(:delivery).permit(:status, :tracker, :sender_employee_id, :recipient_employee_id, :source_id, :destination_id, :items_names, :key_access)
+      params.require(:delivery).permit(:status, :tracker, :sender_employee_id, :recipient_employee_id, :source_id, :destination_id, :items_names, :key_access, :open)
     end
 end
