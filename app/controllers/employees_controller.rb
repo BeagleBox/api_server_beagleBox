@@ -29,7 +29,8 @@ class EmployeesController < ApplicationController
   # PUT /employees/:id
   def update
     @employee.update(employee_params)
-    @employee.contacts.create(contact_description: params[:contact_description])
+    @contact = @employee.contacts.first
+    @contact.update(contact_description: params[:contact_description])
     head :no_content
   end
 
