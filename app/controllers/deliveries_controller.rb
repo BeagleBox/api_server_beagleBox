@@ -70,7 +70,7 @@ class DeliveriesController < ApplicationController
   end
 
   def get_current_delivery
-     @delivery = Delivery.where(tracker: @@current_delivery_tracker)
+     @delivery = Delivery.where(tracker:@current_delivery_tracker)
      render json:@delivery
   end
 
@@ -78,6 +78,14 @@ class DeliveriesController < ApplicationController
   def destroy
     @delivery.destroy
   end
+
+def update_current_delivery deli
+  puts "------------"
+  puts deli["message"]
+  Delivery.all
+  @delivery = Delivery.where(tracker:"DLV7")
+end
+
 
   private
 

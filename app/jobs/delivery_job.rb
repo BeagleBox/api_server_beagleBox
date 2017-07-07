@@ -2,6 +2,8 @@ class DeliveryJob < ApplicationJob
   queue_as :default
 
   def perform(message)
+    puts "/////////////"
+    puts message
     @mes = DeliverySerializer.new(message)
     @sender = Employee.find_by(employee_registration:message.sender.employee_registration)
     @sender = EmployeeSerializer.new(@sender)

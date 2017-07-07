@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(version: 20170524143213) do
     t.string   "tracker"
     t.string   "key_access"
     t.string   "open"
+    t.integer  "total_steps"
+    t.integer  "current_step"
     t.integer  "route_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
@@ -89,14 +91,15 @@ ActiveRecord::Schema.define(version: 20170524143213) do
   end
 
   create_table "monitorings", force: :cascade do |t|
-    t.decimal  "weight"
-    t.decimal  "battery_percentage"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.string   "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "routes", force: :cascade do |t|
     t.string   "name"
+    t.integer  "total_steps"
+    t.integer  "current_step"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.integer  "source_id"

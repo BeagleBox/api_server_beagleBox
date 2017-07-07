@@ -9,10 +9,16 @@ class DeliveryChannel < ApplicationCable::Channel
   def start_delivery(data)
 
   end
+  def stop_delivery(data)
+    @joao = {name:"João Henrique", contact:'5561991793268'}
+    @admins = {:admins=>[@joao]}
+    @admins = @admins.as_json.merge(:type=>'NÃOINFORMAR')
+    ActionCable.server.broadcast 'battery_channel', @admins
+  end
 
   def update_delivery(data)
-    @data = data["message"]
-    DeliveryUpdateJob.perform_later @data
+    # @data = data["message"]
+    DeliveryUpdateJob.perform_later data
   end
 
   def finish_delivery
