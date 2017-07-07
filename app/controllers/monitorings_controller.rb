@@ -5,6 +5,7 @@ class MonitoringsController < ApplicationController
   # GET /monitorings.json
   def index
     @monitorings = Monitoring.all
+    render json: @monitorings
   end
 
   # GET /monitorings/1
@@ -35,7 +36,7 @@ class MonitoringsController < ApplicationController
   end
 
   def battery_callback
-    Monitoring.create()
+      Monitoring.create()
   end
 
   # DELETE /monitorings/1
@@ -53,6 +54,6 @@ class MonitoringsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def monitoring_params
       # params.fetch(:monitor, {})
-      params.require(:monitor).permit(:status)
+      params.require(:monitor).permit(:status,:weight,:battery_percentage)
     end
 end

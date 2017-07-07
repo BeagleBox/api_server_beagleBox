@@ -39,6 +39,8 @@ ActiveRecord::Schema.define(version: 20170524143213) do
     t.string   "message_type"
     t.string   "status"
     t.string   "tracker"
+    t.string   "key_access"
+    t.string   "open"
     t.integer  "route_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false

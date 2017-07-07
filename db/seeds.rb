@@ -28,11 +28,17 @@ humberto.contacts.create(contact_description:"5561981701771")
 elaine = Employee.create(employee_name:'Elaine', employee_registration:561243921,
   employee_email:'elaine@gmail.com', password:"12345678", password_confirmation:"12345678",
   departament_id:3, is_admin:true)
-elaine.contacts.create(contact_description:"5561991793268")
+elaine.contacts.create(contact_description:"5561999458786")
 
 employee1 = Employee.create(employee_name:'Yeltsin', employee_registration:561243921,
   employee_email:'yeltsin@gmail.com', password:"12345678", password_confirmation:"12345678",
   departament_id:4, is_admin:false)
+
+employee2 = Employee.create(employee_name:'Gabriel', employee_registration:261243939,
+employee_email:'gabriel@gmail.com', password:"12345678", password_confirmation:"12345678",
+departament_id:5, is_admin:false)
+employee2.contacts.create(contact_description:"5561992396446")
+
 
 employee3 = Employee.create(employee_name:'Tiago Euler', employee_registration:561243925,
     employee_email:'tiagoe@gmail.com', password:"12345678", password_confirmation:"12345678",
@@ -45,16 +51,12 @@ employee4 = Employee.create(employee_name:'Gabriela', employee_registration:5112
     departament_id:1, is_admin:true)
 employee4.contacts.create(contact_description:"5561982719722")
 
-employee4 = Employee.create(employee_name:'Beatriz', employee_registration:511143925,
+employee5 = Employee.create(employee_name:'Beatriz', employee_registration:511143925,
     employee_email:'beatriz@gmail.com', password:"12345678", password_confirmation:"12345678",
     departament_id:1, is_admin:true)
-employee4.contacts.create(contact_description:"5561996510204")
+employee5.contacts.create(contact_description:"5561996510204")
 
 
-
-employee2 = Employee.create(employee_name:'Gabriela', employee_registration:261243921,
-  employee_email:'humberto@gmail.com', password:"12345678", password_confirmation:"12345678",
-  departament_id:5, is_admin:false)
 
 item1 = Item.create(name: "Data Show")
 item2 = Item.create(name: "Cabo de Energia")
