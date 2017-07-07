@@ -75,3 +75,5 @@ delivery2 = Delivery.create(status: "Aguardando",
               recipient_id: employee2.id,
               source_id: departament1.id,
               destination_id: departament2.id)
+
+Monitoring.create(status: "carregando")
