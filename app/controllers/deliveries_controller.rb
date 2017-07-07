@@ -75,7 +75,8 @@ class DeliveriesController < ApplicationController
   end
 
   def set_key_access_status
-    @delivery = Delivery.where(tracker:@@current_delivery_tracker)
+    @deliveries = Delivery.where(tracker:@@current_delivery_tracker)
+    @delivery = @deliveries.first
     @delivery.update_column(:key_access_status, params[:key_access_status])
     # @delivery.key_access_status = params[:key_access_status]
   end
