@@ -10,6 +10,11 @@ class DeliveryChannel < ApplicationCable::Channel
 
   end
 
+  def update_delivery(data)
+    @data = data["message"]
+    DeliveryUpdateJob.perform_later @data
+  end
+
   def finish_delivery
   end
 

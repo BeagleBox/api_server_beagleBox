@@ -14,8 +14,6 @@ class Delivery < ApplicationRecord
 	has_many :items
 
 
-
-
 	def set_default_values
    		update_column(:tracker, "DLV#{self.id}")
    		update_column(:message_type,"Delivery")
