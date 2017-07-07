@@ -23,7 +23,7 @@ Rails.application.routes.draw do
 
   post 'login', to: 'authentication#authenticate'
 
-  get '/monitorings/:att', to: 'monitorings#battery_callback'
+  get '/monitor/:att', to: 'monitorings#battery_callback'
 
   #get names of departaments as string
   get '/departament_name', to: 'departaments#departament_name'
