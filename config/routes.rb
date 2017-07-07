@@ -28,6 +28,8 @@ Rails.application.routes.draw do
   #get names of departaments as string
   get '/departament_name', to: 'departaments#departament_name'
 
+  get '/get_current_delivery', to: 'deliveries#get_current_delivery'
+
   #Route for RTC using for send information for raspberry
   mount ActionCable.server => "/cable"
 
