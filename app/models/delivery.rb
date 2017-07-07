@@ -15,6 +15,7 @@ class Delivery < ApplicationRecord
 
 
 	def set_default_values
+		update_column(:key_access_status, "false")
    		update_column(:tracker, "DLV#{self.id}")
    		update_column(:message_type,"Delivery")
 	end

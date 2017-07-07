@@ -74,6 +74,11 @@ class DeliveriesController < ApplicationController
      render json:@delivery
   end
 
+  def set_key_access_status
+    @delivery = Delivery.where(tracker:@@current_delivery_tracker)
+    @delivery.key_access_status = params[:key_access_status]
+  end
+
   # DELETE /deliveries/:id
   def destroy
     @delivery.destroy

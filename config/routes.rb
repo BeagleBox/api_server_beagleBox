@@ -30,6 +30,10 @@ Rails.application.routes.draw do
 
   get '/get_current_delivery', to: 'deliveries#get_current_delivery'
 
+  get '/set_key_access_status/:key_access_status', to: 'deliveries#set_key_access_status'
+
+  
+
   #Route for RTC using for send information for raspberry
   mount ActionCable.server => "/cable"
 
