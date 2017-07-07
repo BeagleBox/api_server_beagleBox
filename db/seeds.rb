@@ -64,7 +64,7 @@ item2 = Item.create(name: "Cabo de Energia")
 # hotSpot1 = Hotspot.create(name: "Secretaria", localization: "Predio 1")
 # hotSpot2 = Hotspot.create(name: "Sala 4", localization: "Predio 2")
 
-Route.create(name: "Route 1", source_id: departament1.id, destination_id: departament2.id)
+Route.create(name: "Route 1", total_steps: 10, current_step: 5, source_id: departament1.id, destination_id: departament2.id)
 
 delivery1 = Delivery.create(status: "Em Trânsito",
 							sender_id: employee1.id,

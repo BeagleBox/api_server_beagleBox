@@ -1,5 +1,6 @@
 class MonitoringsController < ApplicationController
   before_action :set_monitoring, only: [:show, :update, :destroy]
+  @@current_delivery
 
   # GET /monitorings
   # GET /monitorings.json
@@ -39,6 +40,10 @@ class MonitoringsController < ApplicationController
   def battery_callback
     @monitor = Monitoring.last
     render json:@monitor
+  end
+
+  def get_current_delivery
+    
   end
 
   # DELETE /monitorings/1
