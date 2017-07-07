@@ -70,7 +70,7 @@ class DeliveriesController < ApplicationController
   end
 
   def get_current_delivery
-     @delivery = Delivery.where(tracker:@current_delivery_tracker)
+     @delivery = Delivery.where(tracker:@@current_delivery_tracker)
      render json:@delivery
   end
 
