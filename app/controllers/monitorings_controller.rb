@@ -11,6 +11,7 @@ class MonitoringsController < ApplicationController
   # GET /monitorings/1
   # GET /monitorings/1.json
   def show
+    render json:@monitorings
   end
 
   # POST /monitorings
