@@ -35,7 +35,8 @@ class MonitoringsController < ApplicationController
   end
 
   def battery_callback
-    Monitoring.create()
+    @monitor Monitoring.all.last
+    render json:@monitor
   end
 
   # DELETE /monitorings/1
