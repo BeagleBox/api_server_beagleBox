@@ -1,6 +1,6 @@
 class DeliveriesController < ApplicationController
   before_action :set_delivery, only: [:show, :update, :destroy]
-  @@current_delivery_tracker
+  @@current_delivery_tracker = "default_tracker"
 
   # GET /deliveries
   def index
