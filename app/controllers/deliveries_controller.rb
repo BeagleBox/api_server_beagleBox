@@ -1,5 +1,6 @@
 class DeliveriesController < ApplicationController
   before_action :set_delivery, only: [:show, :update, :destroy]
+  @@current_delivery_tracker
 
   # GET /deliveries
   def index
@@ -29,6 +30,7 @@ class DeliveriesController < ApplicationController
       end
 
     if @delivery.save
+      @@current_delivery_tracker = @delivery.tracker
       render json: @delivery, include:'sender'
     else
       render json: @delivery.errors, status: :unprocessable_entity
@@ -65,6 +67,11 @@ class DeliveriesController < ApplicationController
     end
 
     render json:@deliveries
+  end
+
+  def get_current_delivery
+     @delivery = Delivery.where(tracker: @@current_delivery_tracker)
+     render json:@delivery
   end
 
   # DELETE /deliveries/:id

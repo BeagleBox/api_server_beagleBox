@@ -6,6 +6,8 @@ class CreateDeliveries < ActiveRecord::Migration[5.0]
       t.string :tracker
       t.string :key_access
       t.string :open
+      t.integer :total_steps
+      t.integer :current_step
       t.belongs_to :route, index: true
 
       t.timestamps

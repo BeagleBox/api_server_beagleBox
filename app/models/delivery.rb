@@ -22,8 +22,10 @@ class Delivery < ApplicationRecord
 	end
 
 	def set_delivery_route
-		@routes = Route.where(source_id: self.source_id, destination_id: self.destination_id)
-   		self.route = @routes.first
+		@routes           = Route.where(source_id: self.source_id, destination_id: self.destination_id)
+   		self.route        = @routes.first
+   		self.total_steps  = @routes.first.total_steps
+   		self.current_step = @routes.first.current_step
    		self.save
 	end
 
