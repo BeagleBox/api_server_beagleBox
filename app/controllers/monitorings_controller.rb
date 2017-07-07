@@ -20,7 +20,7 @@ class MonitoringsController < ApplicationController
     @monitoring = Monitoring.new(monitoring_params)
 
     if @monitoring.save
-      render :show, status: :created, location: @monitoring
+      render json:(@monitoring), status: :created, location: @monitoring
     else
       render json: @monitoring.errors, status: :unprocessable_entity
     end
