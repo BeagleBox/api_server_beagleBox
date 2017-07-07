@@ -5,6 +5,7 @@ class MonitoringsController < ApplicationController
   # GET /monitorings.json
   def index
     @monitorings = Monitoring.all
+    render json: @monitorings
   end
 
   # GET /monitorings/1
