@@ -35,7 +35,7 @@ class MonitoringsController < ApplicationController
   end
 
   def battery_callback
-    @monitor Monitoring.last
+    @monitor = Monitoring.last
     render json:@monitor
   end
 
